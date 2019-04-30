@@ -1,0 +1,32 @@
+﻿<Window x:Class="login.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:login"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="969">
+    <Grid RenderTransformOrigin="1.004,0.489">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                <GradientStop Color="#FF686868"/>
+                <GradientStop Color="#FF0C00FF"/>
+                <GradientStop Color="#FF52A9FF" Offset="0.126"/>
+                <GradientStop Color="#FFE7F9FF" Offset="0.274"/>
+                <GradientStop Color="#FF89CBFF" Offset="0.183"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Sign in" HorizontalAlignment="Left" Height="140" Margin="400,120,0,0" VerticalAlignment="Top" Width="230" FontSize="72"/>
+        <PasswordBox HorizontalAlignment="Left" Height="20" Margin="360,285,0,0" VerticalAlignment="Top" Width="290"  />
+        <Label Content="Email" HorizontalAlignment="Left" Height="35" Margin="255,250,0,0" VerticalAlignment="Top" Width="100" FontSize="14"/>
+        <Label Content="Password" HorizontalAlignment="Left" Height="25" Margin="255,280,0,0" VerticalAlignment="Top" Width="90" FontSize="14"/>
+        <TextBox HorizontalAlignment="Left" Height="20" Margin="360,255,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="290"/>
+        <Button Content="Sign in" HorizontalAlignment="Left" Height="40" Margin="360,365,0,0" VerticalAlignment="Top" Width="290" FontSize="18" BorderBrush="#FF1067FF" Background="#FF60E278"/>
+
+
+    </Grid>
+</Window>
