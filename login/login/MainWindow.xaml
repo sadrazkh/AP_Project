@@ -6,22 +6,39 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:login"
         mc:Ignorable="d"
-        Title="" Height="290" Width="330" ResizeMode="NoResize"  Background="#FF04A1D1">
-    <Grid RenderTransformOrigin="0.967,0.501" Margin="-1,30,0,1">
+        Title="" Height="341.136" Width="705.62" ResizeMode="NoResize"  Background="{x:Null}">
+    <Grid RenderTransformOrigin="0.981,0.5" Margin="-1,0,0,-2" Height="303" VerticalAlignment="Bottom">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="351*"/>
+            <ColumnDefinition Width="350*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="27"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                 <GradientStop Color="#FF686868"/>
                 <GradientStop Color="White"/>
-                <GradientStop Color="White" Offset="0.126"/>
-                <GradientStop Color="#FFE7F9FF" Offset="0.274"/>
-                <GradientStop Color="White" Offset="0.183"/>
+                <GradientStop Color="#FF769CA8"/>
+                <GradientStop Color="#FFE7F9FF"/>
+                <GradientStop Color="White"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <PasswordBox materialDesign:HintAssist.Hint="Password" HorizontalAlignment="Left" Height="25" Margin="25,113,0,0" VerticalAlignment="Top" Width="290" Grid.ColumnSpan="2"  />
-        <TextBox materialDesign:HintAssist.Hint="Email" HorizontalAlignment="Left" Height="25" Margin="25,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="290" Grid.ColumnSpan="2"/>
-        <Button Content="Sign in" HorizontalAlignment="Left" Height="40" Margin="88,161,0,0" VerticalAlignment="Top" Width="140" FontSize="18" BorderBrush="{x:Null}" Background="#FF04A1D1" RenderTransformOrigin="0.895,0.42" Foreground="White"/>
-        <TextBlock HorizontalAlignment="Left" Height="20" Margin="10,-22,0,0" TextWrapping="Wrap" Text="Sign in to your account" VerticalAlignment="Top" Width="264" Grid.ColumnSpan="2" />
+        <PasswordBox materialDesign:HintAssist.Hint="کلمه عبور" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" HorizontalAlignment="Left" Height="46" Margin="25,81,0,0" VerticalAlignment="Top" Width="295" Grid.Row="1"  />
+        <TextBox materialDesign:HintAssist.Hint="ایمیل" Style="{StaticResource MaterialDesignFloatingHintTextBox}" HorizontalAlignment="Left" Height="36" Margin="25,32,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="297" Grid.Row="1"/>
+        <Button Content="ورود" HorizontalAlignment="Left" Height="33" Margin="99,155,0,0" VerticalAlignment="Top" Width="128" FontSize="18" BorderBrush="{x:Null}" Background="#FF04A1D1" RenderTransformOrigin="0.895,0.42" Foreground="White" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="ورود به حساب" VerticalAlignment="Center" Height="28" Width="350" Foreground="White" Background="#FF04A1D1" FontSize="14" TextAlignment="Center" FontStyle="Italic" FontWeight="Bold" TextDecorations="{x:Null}" Margin="0,-1,1,0"/>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="ساختن حساب جدید" VerticalAlignment="Center" Height="28" Width="352" Foreground="White" Background="#FF2FF35B" FontSize="14" TextAlignment="Center" FontStyle="Italic" FontWeight="Bold" TextDecorations="{x:Null}" Margin="350,-1,-1,0" Grid.ColumnSpan="3"/>
+        <Button Content="ساختن" HorizontalAlignment="Left" Height="39" Margin="108,185,0,52" Grid.Row="1" VerticalAlignment="Center" Width="137" Background="#FF2FF35B" Grid.Column="2" BorderBrush="{x:Null}"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="45" Margin="27,74,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="295" materialDesign:HintAssist.Hint="ایمیل" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="38" Margin="26,20,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="295" materialDesign:HintAssist.Hint="نام" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+        <PasswordBox Grid.Column="1" HorizontalAlignment="Left" Height="37" Margin="27,135,0,0" Grid.Row="1" VerticalAlignment="Top" Width="291" materialDesign:HintAssist.Hint="کلمه عبور" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
+        <Rectangle HorizontalAlignment="Left" Height="286" Margin="0,0,0,1" VerticalAlignment="Bottom" Width="3" Fill="#FF19C34F" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
 
 
     </Grid>
+
+
+
 </Window>
