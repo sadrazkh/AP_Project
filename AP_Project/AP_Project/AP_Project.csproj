@@ -156,7 +156,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Back-End\Func\Persons\Manager.cs" />
     <Compile Include="Back-End\Modals\Context.cs" />
+    <Compile Include="Back-End\Modals\Persons\Manager.cs" />
+    <Compile Include="Back-End\Modals\Persons\Person.cs" />
+    <Compile Include="Back-End\Modals\Products\Cars.cs" />
+    <Compile Include="Back-End\Modals\Products\Product.cs" />
     <Compile Include="Front-End\Pages\SignInAndSignUp.xaml.cs">
       <DependentUpon>SignInAndSignUp.xaml</DependentUpon>
     </Compile>
@@ -193,7 +198,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Back-End\NewFolder1\" />
+    <Folder Include="Back-End\Func\Products\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

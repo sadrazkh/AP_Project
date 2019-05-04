@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace AP_Project.Back_End.Modals.Products
 {
-    class Product
+    public class Product
     {
+        public int ProductId { get; set; }
+        public string ProductName { get; set; }
+        public string ProductPhotoAdress { get; set; }
+        public int Store { get; set; }
+        public string Explanations { get; set; }
+        public string ManuFacturer { get; set; }
+        public string Category { get; set; }
+
     }
 }
