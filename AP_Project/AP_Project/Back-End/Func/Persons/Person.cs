@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace AP_Project.Back_End.Func.Persons
 {
     public class Person : Modals.Persons.Person
@@ -11,14 +12,15 @@ namespace AP_Project.Back_End.Func.Persons
         Person(string Us, string Pas, string _FullName, string _Email, string _PhoneNumber)
         {
             bool Creat = false;
-            Password = Security.Hash_SHA256.CreatHash256(Pas);
-            AccessLevel = 1;
+
 
             using (var db = new Modals.Context())
             {
                 var res = db.Persons.Where(i => i.UserName == Us && i.Email == _Email && i.FullName == _FullName && i.PhoneNumber == _PhoneNumber).FirstOrDefault();
                 if(res == null)
                 {
+                    Password = Security.Hash_SHA256.CreatHash256(Pas);
+                    AccessLevel = 1;
                     UserName = Us;
                     FullName = _FullName;
 
@@ -75,10 +77,10 @@ namespace AP_Project.Back_End.Func.Persons
                         .Where(i => i.Password == Security.Hash_SHA256.CreatHash256(Pas)).FirstOrDefault();
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
         }
     }
