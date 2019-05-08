@@ -22,13 +22,12 @@ namespace AP_Project
     {
         public MainWindow()
         {
-            InitializeComponent();
+           
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Window SignInAndSignUp = new Front_End.Pages.SignInAndSignUp();
-            SignInAndSignUp.ShowDialog();
+           
         }
     }
 }

@@ -144,7 +144,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Front-End\Pages\SignInAndSignUp.xaml">
+    <Page Include="Front-End\Pages\SignInAndSignUpPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -162,8 +162,8 @@
     <Compile Include="Back-End\Modals\Persons\Person.cs" />
     <Compile Include="Back-End\Modals\Products\Cars.cs" />
     <Compile Include="Back-End\Modals\Products\Product.cs" />
-    <Compile Include="Front-End\Pages\SignInAndSignUp.xaml.cs">
-      <DependentUpon>SignInAndSignUp.xaml</DependentUpon>
+    <Compile Include="Front-End\Pages\SignInAndSignUpPage.xaml.cs">
+      <DependentUpon>SignInAndSignUpPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

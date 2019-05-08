@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace AP_Project.Front_End.Pages
 {
     /// <summary>
-    /// Interaction logic for SignInAndSignUp.xaml
+    /// Interaction logic for SignInAndSignUpPage.xaml
     /// </summary>
-    public partial class SignInAndSignUp : Window
+    public partial class SignInAndSignUpPage : UserControl
     {
-        public SignInAndSignUp()
+        public SignInAndSignUpPage()
         {
             InitializeComponent();
         }
