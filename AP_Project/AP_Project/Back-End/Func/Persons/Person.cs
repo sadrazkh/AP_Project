@@ -11,7 +11,7 @@ namespace AP_Project.Back_End.Func.Persons
         Person(string Us, string Pas, string _FullName, string _Email, string _PhoneNumber)
         {
             bool Creat = false;
-            Password = Pas;
+            Password = Security.Hash_SHA256.CreatHash256(Pas);
             AccessLevel = 1;
 
             using (var db = new Modals.Context())
@@ -54,7 +54,7 @@ namespace AP_Project.Back_End.Func.Persons
                 {
                     using (var db = new Modals.Context())
                     {
-                        db.Persons.Add(new Modals.Persons.Person { UserName = Us, Password = Pas, FullName = _FullName, PhoneNumber = _PhoneNumber, Email = _Email, AccessLevel = 1, Cart = null });
+                        db.Persons.Add(new Modals.Persons.Person { UserName = Us, Password = Security.Hash_SHA256.CreatHash256(Pas), FullName = _FullName, PhoneNumber = _PhoneNumber, Email = _Email, AccessLevel = 1, Cart = null });
                         db.SaveChanges();
                     }
                 }
@@ -72,7 +72,7 @@ namespace AP_Project.Back_End.Func.Persons
                 using (var db = new Modals.Context())
                 {
                     var res = db.Persons.Where(i => i.UserName == Us || i.Email == Us)
-                        .Where(i => i.Password == Password).FirstOrDefault();
+                        .Where(i => i.Password == Security.Hash_SHA256.CreatHash256(Pas)).FirstOrDefault();
                 }
             }
             catch (Exception)
