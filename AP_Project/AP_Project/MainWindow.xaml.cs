@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using AP_Project.Front_End.Pages;
 
 namespace AP_Project
 {
@@ -27,7 +28,10 @@ namespace AP_Project
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-           
+            aslipage.Visibility = Visibility.Hidden;
+            SignInAndSignUpPage sign = new SignInAndSignUpPage();
+            wwe.Children.Add(sign);
+
         }
     }
 }
