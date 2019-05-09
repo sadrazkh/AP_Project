@@ -54,6 +54,7 @@ namespace AP_Project.Back_End.Func.Persons
                     {
                         throw new Exception("اطلاعات بالا تکراری می باشند");
                     }
+                    
                 }
 
                 if (Creat)
@@ -105,6 +106,7 @@ namespace AP_Project.Back_End.Func.Persons
                     {
                         throw new Exception("Old Password Is Wrong!");
                     }
+                    db.SaveChanges();
                 }
             }
             public void ChangePersonalInfo(string NewEmail,string NewFullName,string NewPhoneNumber)
@@ -134,7 +136,8 @@ namespace AP_Project.Back_End.Func.Persons
                             res.PhoneNumber = NewPhoneNumber;
                         }
                     }
-                        
+                    db.SaveChanges();
+
                 }
             }
             public bool LogOut()
