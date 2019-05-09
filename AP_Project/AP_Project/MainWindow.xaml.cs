@@ -28,9 +28,9 @@ namespace AP_Project
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            aslipage.Visibility = Visibility.Hidden;
+            head.Visibility = Visibility.Hidden;
             SignInAndSignUpPage sign = new SignInAndSignUpPage();
-            wwe.Children.Add(sign);
+            body.Children.Add(sign);
 
         }
     }
