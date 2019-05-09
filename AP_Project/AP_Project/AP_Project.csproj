@@ -158,6 +158,7 @@
     </Compile>
     <Compile Include="Back-End\Func\Persons\Manager.cs" />
     <Compile Include="Back-End\Func\Persons\Person.cs" />
+    <Compile Include="Back-End\Func\Products\Product.cs" />
     <Compile Include="Back-End\Modals\Context.cs" />
     <Compile Include="Back-End\Modals\Persons\Manager.cs" />
     <Compile Include="Back-End\Modals\Persons\Person.cs" />
@@ -199,9 +200,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Back-End\Func\Products\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
