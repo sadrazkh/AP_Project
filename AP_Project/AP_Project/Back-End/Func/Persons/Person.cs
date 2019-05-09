@@ -27,12 +27,12 @@ namespace AP_Project.Back_End.Func.Persons
                     var res = db.Persons.Where(i => i.UserName == Us && i.Email == _Email && i.FullName == _FullName && i.PhoneNumber == _PhoneNumber).FirstOrDefault();
                     if (res == null)
                     {
-                        UserName = Us;
-                        FullName = _FullName;
+                        base.UserName = Us;
+                        base.FullName = _FullName;
 
                         if (System.Text.RegularExpressions.Regex.IsMatch(_PhoneNumber, @"(\+98|0)?9\d{9}"))
                         {
-                            PhoneNumber = _PhoneNumber;
+                            base.PhoneNumber = _PhoneNumber;
                         }
                         else
                         {
@@ -41,7 +41,7 @@ namespace AP_Project.Back_End.Func.Persons
 
                         if (System.Text.RegularExpressions.Regex.IsMatch(_Email, @"^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$"))
                         {
-                            Email = _Email;
+                            base.Email = _Email;
                         }
                         else
                         {
@@ -83,11 +83,63 @@ namespace AP_Project.Back_End.Func.Persons
                             .Where(i => i.Password == Security.Hash_SHA256.CreatHash256(Pas)).FirstOrDefault();
                     }
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
 
-                    throw;
+                    throw ex;
                 }
+            }
+
+            public void ChangePersonPass(string OldPass,string NewPass)
+            {
+                using (var db = new Modals.Context())
+                {
+                    string Us = base.UserName;
+                    var res = db.Persons.Where(i => i.UserName == Us)
+                        .Where(i => (bool)(i.Password == Security.Hash_SHA256.CreatHash256(OldPass))).FirstOrDefault();
+                    if(res != null)
+                    {
+                        base.Password = Security.Hash_SHA256.CreatHash256(NewPass);
+                    }
+                    else
+                    {
+                        throw new Exception("Old Password Is Wrong!");
+                    }
+                }
+            }
+            public void ChangePersonalInfo(string NewEmail,string NewFullName,string NewPhoneNumber)
+            {
+                string Us = base.UserName;
+                using (var db = new Modals.Context())
+                {
+                    var res = db.Persons.Where(i => i.UserName == Us).FirstOrDefault();
+                    if (NewFullName != null)
+                    {
+                        base.FullName = NewFullName;
+                        res.FullName = NewFullName;
+                    }
+                    if(NewEmail != null)
+                    {
+                        if(System.Text.RegularExpressions.Regex.IsMatch(NewEmail, @"^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$"))
+                        {
+                            base.Email = NewEmail;
+                            res.Email = NewEmail;
+                        }
+                    }
+                    if(NewPhoneNumber != null)
+                    {
+                        if(System.Text.RegularExpressions.Regex.IsMatch(NewPhoneNumber, @"(\+98|0)?9\d{9}"))
+                        {
+                            base.PhoneNumber = NewPhoneNumber;
+                            res.PhoneNumber = NewPhoneNumber;
+                        }
+                    }
+                        
+                }
+            }
+            public bool LogOut()
+            {
+                return true;
             }
         }
     }
