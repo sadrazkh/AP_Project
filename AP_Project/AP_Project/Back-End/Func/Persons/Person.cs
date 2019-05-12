@@ -36,7 +36,7 @@ namespace AP_Project.Back_End.Func.Persons
                         }
                         else
                         {
-                            throw new FormatException("فرمت شماره همراه وارد شده نادرست است");
+                            throw new Exceptions.InfoFormatException("فرمت شماره همراه وارد شده نادرست است");
                         }
 
                         if (System.Text.RegularExpressions.Regex.IsMatch(_Email, @"^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$"))
@@ -45,14 +45,14 @@ namespace AP_Project.Back_End.Func.Persons
                         }
                         else
                         {
-                            throw new FormatException("فرمت ایمیل وارد شده نادرست است");
+                            throw new Exceptions.InfoFormatException("فرمت ایمیل وارد شده نادرست است");
                         }
 
                         Creat = true;
                     }
                     else
                     {
-                        throw new Exception("اطلاعات بالا تکراری می باشند");
+                        throw new Exceptions.InfoExistException("اطلاعات بالا تکراری می باشند");
                     }
                     
                 }
@@ -127,6 +127,10 @@ namespace AP_Project.Back_End.Func.Persons
                             base.Email = NewEmail;
                             res.Email = NewEmail;
                         }
+                        else
+                        {
+                            throw new Exceptions.InfoFormatException("فرمت ایمیل وارد شده نادرست است");
+                        }
                     }
                     if(NewPhoneNumber != null)
                     {
@@ -134,6 +138,10 @@ namespace AP_Project.Back_End.Func.Persons
                         {
                             base.PhoneNumber = NewPhoneNumber;
                             res.PhoneNumber = NewPhoneNumber;
+                        }
+                        else
+                        {
+                            throw new Exceptions.InfoFormatException("فرمت شماره وارد شده نادرست است");
                         }
                     }
                     db.SaveChanges();

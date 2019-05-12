@@ -10,17 +10,11 @@ namespace AP_Project.Back_End.Func.Products
     {
         Product(string Name,int store,string ProductPhotoAdress,string Explanations,string Category,string ManuFacturer,int PB)
         {
-            base.ProductBarcode = PB;
-            base.ProductName = Name;
-            base.ProductPhotoAdress = ProductPhotoAdress;
-            base.Store = store;
-            base.Explanations = Explanations;
-            base.Category = Category;
-            base.ManuFacturer = ManuFacturer;
 
             using (var db = new Modals.Context())
             {
-                db.Products.Add(this);
+                db.Products.Add(new Modals.Products.Product
+                { ProductBarcode = PB, ProductName = Name, Store = store, ProductPhotoAdress = ProductPhotoAdress, Explanations = Explanations, Category = Category, ManuFacturer = ManuFacturer });
                 db.SaveChanges();
             }
         }
