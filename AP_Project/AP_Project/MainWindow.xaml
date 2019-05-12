@@ -16,6 +16,7 @@
                
             </Grid.RowDefinitions>
             <Button Content="Sign in / Sign up" Grid.Row="0" Height="Auto" Margin="29,20,1163,14" Click="Button_Click" Background="#FF1CCB0B"/>
+                <!--<TextBlock  Text="Sign in / Sign up" Hyperlink.Click="TextBlock_Click" Margin="29,20,1163,14" TextAlignment="Center" TextBlock.FontSize="18" Background="#FF1CCB0B" />-->
             <Label Content="Marsana" Grid.Row="0" FontSize="36" FontWeight="Bold" FontStyle="Italic" Margin="768,5,404,1" FontFamily="Impact" Foreground="DarkRed" />
             <StackPanel Grid.Row="1" Background="#FFB0EEE0" Orientation="Horizontal">
                 <Button Width="270" Height="60" Content="کتاب و فرهنگ"  Background="#FF4B483A" BorderBrush="#FF4B483A"/>
@@ -29,8 +30,9 @@
     <StackPanel x:Name="body">
             <Grid>
                 
-            </Grid>      
-    </StackPanel>
+            </Grid>
+            
+        </StackPanel>
     </Grid>
 
 </Window>

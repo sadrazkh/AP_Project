@@ -28,10 +28,17 @@ namespace AP_Project
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+
+
+        }
+
+        string User = "salam";
+
+        private void TextBlock_Click(object sender, RoutedEventArgs e)
+        {
             head.Visibility = Visibility.Hidden;
             SignInAndSignUpPage sign = new SignInAndSignUpPage();
             body.Children.Add(sign);
-
         }
     }
 }
