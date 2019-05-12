@@ -31,6 +31,11 @@ namespace AP_Project
             //head.Visibility = Visibility.Hidden;
             UserManagement sign = new UserManagement();
             body.Children.Add(sign);
+        }
+
+
+        private void TextBlock_Click(object sender, RoutedEventArgs e)
+        {
 
         }
     }

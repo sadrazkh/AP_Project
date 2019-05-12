@@ -164,9 +164,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Back-End\Exceptions\InfoExistException.cs" />
+    <Compile Include="Back-End\Exceptions\InfoFormatException.cs" />
     <Compile Include="Back-End\Func\Persons\Manager.cs" />
     <Compile Include="Back-End\Func\Persons\Person.cs" />
     <Compile Include="Back-End\Func\Products\Product.cs" />
+    <Compile Include="Back-End\MainRoot.cs" />
     <Compile Include="Back-End\Modals\Context.cs" />
     <Compile Include="Back-End\Modals\Persons\Manager.cs" />
     <Compile Include="Back-End\Modals\Persons\Person.cs" />
