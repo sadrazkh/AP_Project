@@ -32,7 +32,6 @@ namespace AP_Project
 
         }
 
-        string User = "salam";
 
         private void TextBlock_Click(object sender, RoutedEventArgs e)
         {
