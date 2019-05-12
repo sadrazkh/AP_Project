@@ -12,26 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using AP_Project.Front_End.Pages;
 
-namespace AP_Project
+namespace AP_Project.Front_End.Pages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for UserManagement.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class UserManagement : UserControl
     {
-        public MainWindow()
+        public UserManagement()
         {
-           
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            //head.Visibility = Visibility.Hidden;
-            UserManagement sign = new UserManagement();
-            body.Children.Add(sign);
-
+            InitializeComponent();
         }
     }
 }

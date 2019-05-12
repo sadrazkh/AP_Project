@@ -6,31 +6,31 @@
         xmlns:Signin="clr-namespace:AP_Project.Front_End.Pages"
         xmlns:local="clr-namespace:AP_Project"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1500" Width="1350"  MinHeight="1500" MinWidth="1350" MaxHeight="1500" MaxWidth="1350">
-    <Grid>
-        <StackPanel x:Name="head" Height="120" Margin="0,0,0,1349">
+        Title="MainWindow" Height="665" Width="1120">
+    <Grid x:Name="total">
+        <StackPanel x:Name="head" Margin="0,2,-1,512" Height="120">
+            <Grid Margin="-22,0,1,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+
+                </Grid.RowDefinitions>
+                <Button Content="Sign in / Sign up" Grid.Row="0" Height="Auto" Margin="48,14,931,20" Click="Button_Click" Background="#FF1CCB0B"/>
+                <Label Content="Marsana" Grid.Row="0" FontSize="36" FontWeight="Bold" FontStyle="Italic" Margin="956,1,22,5" FontFamily="Impact" Foreground="DarkRed" />
+                <StackPanel Grid.Row="1" Background="#FFB0EEE0" Orientation="Horizontal" Margin="18,0,0,0">
+                    <Button Width="224" Height="60" Content="کتاب و فرهنگ"  Background="#FF4B483A" BorderBrush="#FF4B483A"/>
+                    <Button Width="224" Height="60" Content="مد و پوشاک"  Background="#FF4B483A" BorderBrush="#FF4B483A"/>
+                    <Button Width="224" Height="60" Content="ورزش "  Background="#FF4B483A" BorderBrush="#FF4B483A"/>
+                    <Button Width="224" Height="60" Content="لوازم آشپزخانه "  Background="#FF4B483A" BorderBrush="#FF4B483A"/>
+                    <Button Width="224" Height="60" Content="کالای دیجیتال "  Background="#FF4B483A" BorderBrush="#FF4B483A"/>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+        <StackPanel x:Name="body" Margin="0,-1,0,5">
             <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="60"/>
-                <RowDefinition Height="60"/>
-               
-            </Grid.RowDefinitions>
-            <Button Content="Sign in / Sign up" Grid.Row="0" Height="Auto" Margin="29,20,1163,14" Click="Button_Click" Background="#FF1CCB0B"/>
-            <Label Content="Marsana" Grid.Row="0" FontSize="36" FontWeight="Bold" FontStyle="Italic" Margin="768,5,404,1" FontFamily="Impact" Foreground="DarkRed" />
-            <StackPanel Grid.Row="1" Background="#FFB0EEE0" Orientation="Horizontal">
-                <Button Width="270" Height="60" Content="کتاب و فرهنگ"  Background="#FF4B483A" BorderBrush="#FF4B483A"/>
-                <Button Width="270" Height="60" Content="مد و چوشاک"  Background="#FF4B483A" BorderBrush="#FF4B483A"/>
-                <Button Width="270" Height="60" Content="ورزش "  Background="#FF4B483A" BorderBrush="#FF4B483A"/>
-                <Button Width="270" Height="60" Content="خانه و آشپز خانه"  Background="#FF4B483A" BorderBrush="#FF4B483A"/>
-                <Button Width="270" Height="60" Content="کالای دیجیتال" Background="#FF4B483A" BorderBrush="#FF4B483A"/>
-            </StackPanel>
-    </Grid>
-    </StackPanel>
-    <StackPanel x:Name="body">
-            <Grid>
-                
-            </Grid>      
-    </StackPanel>
+
+            </Grid>
+        </StackPanel>
     </Grid>
 
 </Window>

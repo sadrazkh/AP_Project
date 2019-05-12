@@ -144,7 +144,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Front-End\Pages\DashBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Front-End\Pages\SignInAndSignUpPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Front-End\Pages\UserManagement.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -165,8 +173,14 @@
     <Compile Include="Back-End\Modals\Products\Cars.cs" />
     <Compile Include="Back-End\Modals\Products\Product.cs" />
     <Compile Include="Back-End\Security\Hash_SHA256.cs" />
+    <Compile Include="Front-End\Pages\DashBoard.xaml.cs">
+      <DependentUpon>DashBoard.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Front-End\Pages\SignInAndSignUpPage.xaml.cs">
       <DependentUpon>SignInAndSignUpPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Front-End\Pages\UserManagement.xaml.cs">
+      <DependentUpon>UserManagement.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

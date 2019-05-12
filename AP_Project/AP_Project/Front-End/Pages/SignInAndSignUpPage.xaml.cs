@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+ 
 
 namespace AP_Project.Front_End.Pages
 {
@@ -23,6 +24,11 @@ namespace AP_Project.Front_End.Pages
         public SignInAndSignUpPage()
         {
             InitializeComponent();
+        }
+
+        private void SignIn_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }
