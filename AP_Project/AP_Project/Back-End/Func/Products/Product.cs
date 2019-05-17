@@ -10,30 +10,14 @@ namespace AP_Project.Back_End.Func.Products
     {
         Product(string Name,int store,string ProductPhotoAdress,string Explanations,string Category,string ManuFacturer,int PB)
         {
-
-            using (var db = new Modals.Context())
-            {
-                db.Products.Add(new Modals.Products.Product
-                { ProductBarcode = PB, ProductName = Name, Store = store, ProductPhotoAdress = ProductPhotoAdress, Explanations = Explanations, Category = Category, ManuFacturer = ManuFacturer });
-                db.SaveChanges();
-            }
+            ConectionToDb.AddNewProduct(Name, store, ProductPhotoAdress, Explanations, Category, ManuFacturer, PB);
         }
 
         public void ChangeProductStore(int NewStore)
         {
-            using (var db = new Modals.Context())
-            {
-                int PB = base.ProductBarcode;
-                var res = db.Products.Where(i => i.ProductBarcode == PB).FirstOrDefault();
-                if(res != null)
-                {
-                    if (NewStore >= 0)
-                    {
-                        res.Store = NewStore;
-                    }
-                    db.SaveChanges();
-                }
-            }
+            ConectionToDb.ChangeProductStore(NewStore, new Modals.Products.Product
+            { Category=base.Category,Explanations=base.Explanations,ManuFacturer=base.ManuFacturer,ProductBarcode=base.ProductBarcode,
+                ProductName =base.ProductName,ProductPhotoAdress=base.ProductPhotoAdress,ProductId=base.ProductId});
         }
 
         public Modals.Products.Product SelectProduct()

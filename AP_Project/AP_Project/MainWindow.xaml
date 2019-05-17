@@ -6,10 +6,10 @@
         xmlns:Signin="clr-namespace:AP_Project.Front_End.Pages"
         xmlns:local="clr-namespace:AP_Project"
         mc:Ignorable="d"
-<<<<<<< HEAD
+<Window>
         Title="MainWindow" Height="665" Width="1120">
-    <Grid x:Name="total">
-        <StackPanel x:Name="head" Margin="0,2,-1,512" Height="120">
+    <Grid x:Name="total"></Grid>
+    <StackPanel x:Name="head" Margin="0,2,-1,512" Height="120">
             <Grid Margin="-22,0,1,0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="60"/>
@@ -27,11 +27,11 @@
                 </StackPanel>
             </Grid>
         </StackPanel>
-        <StackPanel x:Name="body" Margin="0,-1,0,5">
+        <StackPanel x:Name="body" Margin="0,-1,0,5"></StackPanel>
             <Grid>
 
             </Grid>
-=======
+<!--=======-->
         Title="MainWindow" Height="1500" Width="1350"  MinHeight="1500" MinWidth="1350" MaxHeight="1500" MaxWidth="1350">
     <Grid>
         <StackPanel x:Name="head" Height="120" Margin="0,0,0,1349">
@@ -58,8 +58,8 @@
                 
             </Grid>
             
->>>>>>> master
+<!-->>>>>>> master-->
         </StackPanel>
     </Grid>
-
 </Window>
+<!--</Window>-->

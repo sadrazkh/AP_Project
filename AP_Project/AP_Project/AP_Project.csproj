@@ -166,6 +166,7 @@
     </Compile>
     <Compile Include="Back-End\Exceptions\InfoExistException.cs" />
     <Compile Include="Back-End\Exceptions\InfoFormatException.cs" />
+    <Compile Include="Back-End\Func\ConectionToDb.cs" />
     <Compile Include="Back-End\Func\Persons\Manager.cs" />
     <Compile Include="Back-End\Func\Persons\Person.cs" />
     <Compile Include="Back-End\Func\Products\Product.cs" />
