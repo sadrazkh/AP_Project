@@ -15,9 +15,7 @@ namespace AP_Project.Back_End.Func.Products
 
         public void ChangeProductStore(int NewStore)
         {
-            ConectionToDb.ChangeProductStore(NewStore, new Modals.Products.Product
-            { Category=base.Category,Explanations=base.Explanations,ManuFacturer=base.ManuFacturer,ProductBarcode=base.ProductBarcode,
-                ProductName =base.ProductName,ProductPhotoAdress=base.ProductPhotoAdress,ProductId=base.ProductId});
+            ConectionToDb.ChangeProductStore(NewStore,this.ProductBarcode);
         }
 
         public Modals.Products.Product SelectProduct()
