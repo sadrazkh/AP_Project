@@ -25,18 +25,25 @@ namespace AP_Project
         {
             InitializeComponent();
         }
+        SignInAndSignUpPage sad = new SignInAndSignUpPage();
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             //head.Visibility = Visibility.Hidden;
-            UserManagement sign = new UserManagement();
-            body.Children.Add(sign);
+            //UserManagement sign = new UserManagement();
+            //body.Children.Add(sign);
+            body.Children.Add(sad);
         }
 
 
         private void TextBlock_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        public  void RemoveUserControler(UserControl Page)
+        {
+            body.Children.Remove(Page);
         }
     }
 }

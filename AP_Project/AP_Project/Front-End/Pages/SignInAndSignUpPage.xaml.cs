@@ -28,6 +28,8 @@ namespace AP_Project.Front_End.Pages
 
         private void SignIn_Click(object sender, RoutedEventArgs e)
         {
+            MainWindow Window = new MainWindow();
+            Window.RemoveUserControler(this);
             
         }
     }
