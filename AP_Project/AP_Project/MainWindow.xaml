@@ -27,11 +27,31 @@
                 </StackPanel>
             </Grid>
         </StackPanel>
-        <StackPanel x:Name="body" Margin="0,-1,0,5">
+        <Grid x:Name="body" Margin="0,-1,0,5">
             <Grid>
-
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="176*"/>
+                    <RowDefinition Height="139*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Image Source="AP_Project/1335154.jpg" Margin="38,40,318,62" Grid.Row="1" Grid.Column="1"/>
+                <Label Content=" iphone xگوشی موبایل اپل " Grid.Row="1" Grid.Column="1" Margin="265,111,101,118"  FontSize="16" />
+                <Label Content="17,000,000" Grid.Row="1" Grid.Column="1"   Margin="298,158,88,74" Foreground="Red" FontSize="20"/>
+                <Image Grid.Column="0" Grid.Row="0" Source="AP_Project/1903438.jpg" Margin="35,156,348,24"/>
+                <Label Content="ساعت هوشمند وی" Margin="276,217,80,92"  FontSize="16" />
+                <Label Content="102,000"   Margin="309,256,117,56" Foreground="Red" FontSize="20"/>
+                <Image Grid.Row="1" Source="AP_Project/170854.jpg" Margin="39,51,317,38"/>
+                <Label Content=" SanDisk 16G  فلش مموری" Grid.Row="1" Margin="270,103,86,133"  FontSize="16" />
+                <Label Content="35,000"   Margin="339,148,49,74" Foreground="Red" FontSize="20" Grid.Row="1" RenderTransformOrigin="0.28,-0.404"/>
+                <Image Grid.Column="1" Source="AP_Project/110462428.jpg" Margin="20,125,336,38"/>
+                <Label Content="ست چای خوری سه تکه" Grid.Column="1" Margin="276,187,90,108"  FontSize="16" />
+                <Label Content="28,100"   Margin="316,238,74,66" Foreground="Red" FontSize="20" Grid.Column="1"/>
             </Grid>
-        </StackPanel>
+
+        </Grid>
     </Grid>
 
     <!--=======-->
@@ -45,7 +65,9 @@
 
                 </Grid.RowDefinitions>
                 <Button Content="Sign in / Sign up" Grid.Row="0" Height="Auto" Margin="29,20,1163,14" Click="Button_Click" Background="#FF1CCB0B"/>
-                --><!--<TextBlock  Text="Sign in / Sign up" Hyperlink.Click="TextBlock_Click" Margin="29,20,1163,14" TextAlignment="Center" TextBlock.FontSize="18" Background="#FF1CCB0B" />--><!--
+                -->
+    <!--<TextBlock  Text="Sign in / Sign up" Hyperlink.Click="TextBlock_Click" Margin="29,20,1163,14" TextAlignment="Center" TextBlock.FontSize="18" Background="#FF1CCB0B" />-->
+    <!--
                 <Label Content="Marsana" Grid.Row="0" FontSize="36" FontWeight="Bold" FontStyle="Italic" Margin="768,5,404,1" FontFamily="Impact" Foreground="DarkRed" />
                 <StackPanel Grid.Row="1" Background="#FFB0EEE0" Orientation="Horizontal">
                     <Button Width="270" Height="60" Content="کتاب و فرهنگ"  Background="#FF4B483A" BorderBrush="#FF4B483A"/>
