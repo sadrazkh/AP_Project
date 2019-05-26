@@ -25,14 +25,13 @@ namespace AP_Project
         {
             InitializeComponent();
         }
-        SignInAndSignUpPage sad = new SignInAndSignUpPage();
-
+        public SignInAndSignUpPage sign = new SignInAndSignUpPage();
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //head.Visibility = Visibility.Hidden;
-            //UserManagement sign = new UserManagement();
-            //body.Children.Add(sign);
-            body.Children.Add(sad);
+            head.Visibility = Visibility.Hidden;
+            
+           
+            body.Children.Add(sign);
         }
 
 
@@ -43,7 +42,7 @@ namespace AP_Project
 
         public  void RemoveUserControler(UserControl Page)
         {
-            body.Children.Remove(Page);
+            
         }
     }
 }
