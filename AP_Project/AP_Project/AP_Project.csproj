@@ -148,6 +148,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Front-End\Pages\management.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Front-End\Pages\showproducts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Front-End\Pages\SignInAndSignUpPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -179,6 +187,12 @@
     <Compile Include="Back-End\Security\Hash_SHA256.cs" />
     <Compile Include="Front-End\Pages\DashBoard.xaml.cs">
       <DependentUpon>DashBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Front-End\Pages\management.xaml.cs">
+      <DependentUpon>management.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Front-End\Pages\showproducts.xaml.cs">
+      <DependentUpon>showproducts.xaml</DependentUpon>
     </Compile>
     <Compile Include="Front-End\Pages\SignInAndSignUpPage.xaml.cs">
       <DependentUpon>SignInAndSignUpPage.xaml</DependentUpon>
