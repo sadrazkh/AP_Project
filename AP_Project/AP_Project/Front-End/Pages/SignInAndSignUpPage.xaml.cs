@@ -28,18 +28,18 @@ namespace AP_Project.Front_End.Pages
         public UserManagement manager = new UserManagement();
         private void SignIn_Click(object sender, RoutedEventArgs e)
         {
-            
-            //if(func(UserName.Text,Password.Password))
-            //{
+
+            if (Back_End.Func.Persons.AP_Project.Back_End.Func.Persons.Person.PersonLogin(UserName.Text, Password.Password)) 
+            {
                 MainWindow win = (MainWindow)Window.GetWindow(this);
                 win.Visibility = Visibility.Visible;
                 win.sign.Visibility = Visibility.Hidden;
                 win.body.Children.Add(manager);
-          //  }
-           // else
-          //  {
-             //   MessageBox.Show("Validation failed");
-           // }
+            }
+            else
+            {
+                MessageBox.Show("Validation failed");
+            }
         }
 
         private void SignUp_Click(object sender, RoutedEventArgs e)

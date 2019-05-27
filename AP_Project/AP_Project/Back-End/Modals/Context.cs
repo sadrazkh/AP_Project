@@ -16,7 +16,7 @@ namespace AP_Project.Back_End.Modals
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=E:\GitHub\AP_Project\AP_Project\AP_Project\AP_Project_DB;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=APProjectDB;Trusted_Connection=True;");
         }
     }
 }
