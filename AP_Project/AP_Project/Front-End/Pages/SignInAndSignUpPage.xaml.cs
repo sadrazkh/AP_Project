@@ -29,17 +29,22 @@ namespace AP_Project.Front_End.Pages
         private void SignIn_Click(object sender, RoutedEventArgs e)
         {
             
-            if(Func(UserName.Text,Password.Password))
-            {
+            //if(func(UserName.Text,Password.Password))
+            //{
                 MainWindow win = (MainWindow)Window.GetWindow(this);
                 win.Visibility = Visibility.Visible;
                 win.sign.Visibility = Visibility.Hidden;
                 win.body.Children.Add(manager);
-            }
-            else
-            {
-                MessageBox.Show("Validation failed");
-            }
+          //  }
+           // else
+          //  {
+             //   MessageBox.Show("Validation failed");
+           // }
+        }
+
+        private void SignUp_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

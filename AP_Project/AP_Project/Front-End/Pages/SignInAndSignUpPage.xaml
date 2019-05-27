@@ -1,48 +1,43 @@
 ﻿<UserControl x:Class="AP_Project.Front_End.Pages.SignInAndSignUpPage"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-               xmlns:MaterialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:AP_Project.Front_End.Pages"
              mc:Ignorable="d" 
              d:DesignHeight="665" d:DesignWidth="1120">
-    <Grid Height="663.83" Width="1120.746">
+    <Grid RenderTransformOrigin="0.981,0.5" Margin="-1,0,0,-1" Height="636" VerticalAlignment="Bottom">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                <GradientStop Color="#FF686868"/>
+                <GradientStop Color="White"/>
+                <GradientStop Color="#FF769CA8"/>
+                <GradientStop Color="#FFE7F9FF"/>
+                <GradientStop Color="White"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <PasswordBox x:Name="Password" materialDesign:HintAssist.Hint="Password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" HorizontalAlignment="Left" Height="46" Margin="122,169,0,0" VerticalAlignment="Top" Width="296" Grid.Row="1" FontSize="14"  />
+        <TextBox x:Name="UserName" materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}" HorizontalAlignment="Left" Height="56" Margin="120,54,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="298" Grid.Row="1" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Sign In" VerticalAlignment="Center" Height="37" Width="557" Foreground="White" Background="#FF04A1D1" FontSize="24" TextAlignment="Center" FontStyle="Italic" FontWeight="Bold" TextDecorations="{x:Null}" Margin="3,13,0,0" />
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Sign up" VerticalAlignment="Center" Height="38" Width="556" Foreground="White" Background="#FF2FF35B" FontSize="24" TextAlignment="Center" FontStyle="Italic" FontWeight="Bold" TextDecorations="{x:Null}" Margin="1,13,4,585" Grid.Column="1" Grid.RowSpan="2"/>
+        <Button Click="SignUp_Click" x:Name="SignUp" Content="Sign up" HorizontalAlignment="Left" Height="36" Margin="206,450,0,100" Grid.Row="1" VerticalAlignment="Center" Width="118" Background="#FF2FF35B" Grid.Column="1" BorderBrush="{x:Null}" FontSize="20"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="58" Margin="92,250,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="294" materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="14" />
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="53" Margin="96,57,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="294" materialDesign:HintAssist.Hint="Name" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="14"/>
+        <PasswordBox Grid.Column="1" HorizontalAlignment="Left" Height="49" Margin="94,355,0,0" Grid.Row="1" VerticalAlignment="Top" Width="290" materialDesign:HintAssist.Hint="Password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" RenderTransformOrigin="0.491,2.122" FontSize="14"/>
+        <Rectangle HorizontalAlignment="Left" Height="585" Margin="0,0,0,1" VerticalAlignment="Bottom" Width="3" Fill="#FF19C34F" Grid.Column="1" Grid.Row="1"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="54" Margin="92,160,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="294"  materialDesign:HintAssist.Hint="Phone number" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="14"/>
+        <Button Click="SignIn_Click" x:Name="SignIn" Content="Sign in" HorizontalAlignment="Left" Height="44" Margin="210,339,0,203" Grid.Row="1" VerticalAlignment="Center" Width="120" Background="#FF04A1D1" BorderBrush="{x:Null}" RenderTransformOrigin="0.453,1.196" FontSize="20"/>
 
-        <GroupBox Grid.Column="0" Header="Login Option" TextBlock.TextAlignment="Center" FontSize="18" Background="White">
-            <StackPanel Margin="10 20"  >
-                <StackPanel Margin="10 20">
-                    <TextBox x:Name="UserName"  MaterialDesign:HintAssist.Hint="UserName or Email"  Style="{StaticResource MaterialDesignFloatingHintTextBox}" TextAlignment="Left" FontSize="18"  Height="45"/>
-                </StackPanel>
-                <StackPanel Margin="10 20">
-                    <PasswordBox x:Name="Password" MaterialDesign:HintAssist.Hint="Password" TextBlock.TextAlignment="Left" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" TextBlock.FontSize="18" Height="45"/>
-                </StackPanel>
-                <Button x:Name="SignIn" Content="Sign In" FontSize="18" Height="40" Width="100" Margin="10 60" Background="#33CC99" Click="SignIn_Click" />
-            </StackPanel>
-        </GroupBox>
-        <GroupBox Grid.Column="1" Header="SignUp Option" TextBlock.TextAlignment="Center" FontSize="18" MaterialDesign:ColorZoneAssist.Mode="Accent" Background="White">
-            <StackPanel Margin="10 20"  >
-                <StackPanel Margin="10 10">
-                    <TextBox x:Name="FullName"  MaterialDesign:HintAssist.Hint="Full Name"  Style="{StaticResource MaterialDesignFloatingHintTextBox}" TextAlignment="Left" FontSize="18"  Height="45"/>
-                </StackPanel>
-                <StackPanel Margin="10 10">
-                    <TextBox x:Name="PhoneNumber"  MaterialDesign:HintAssist.Hint="Phone Number"  Style="{StaticResource MaterialDesignFloatingHintTextBox}" TextAlignment="Left" FontSize="18"  Height="45"/>
-                </StackPanel>
-                <StackPanel Margin="10 10">
-                    <TextBox x:Name="Email"  MaterialDesign:HintAssist.Hint="Email"  Style="{StaticResource MaterialDesignFloatingHintTextBox}" TextAlignment="Left" FontSize="18"  Height="45"/>
-                </StackPanel>
-                <StackPanel Margin="10 10">
-                    <TextBox x:Name="UserNameNew"  MaterialDesign:HintAssist.Hint="UserName"  Style="{StaticResource MaterialDesignFloatingHintTextBox}" TextAlignment="Left" FontSize="18"  Height="45"/>
-                </StackPanel>
-                <StackPanel Margin="10 10">
-                    <PasswordBox x:Name="PasswordNew" MaterialDesign:HintAssist.Hint="Password" TextBlock.TextAlignment="Left" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" TextBlock.FontSize="18" Height="45"/>
-                </StackPanel>
-                <Button x:Name="SignUp" Content="Sign Up" FontSize="18" Height="40" Width="100" Margin="10 60" Background="#FF0099"  />
-            </StackPanel>
-        </GroupBox>
+
     </Grid>
+
 </UserControl>
