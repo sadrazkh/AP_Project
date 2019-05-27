@@ -7,13 +7,13 @@
              xmlns:local="clr-namespace:AP_Project.Front_End.Pages"
              mc:Ignorable="d" 
              d:DesignHeight="665" d:DesignWidth="1120">
-    <Grid RenderTransformOrigin="0.981,0.5" Margin="-1,0,0,-1" Height="636" VerticalAlignment="Bottom">
+    <Grid Height="665" Width="1120" RenderTransformOrigin="0.981,0.5" Margin="-1,0,0,-1"  VerticalAlignment="Bottom">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="90"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.Background>
@@ -27,9 +27,9 @@
         </Grid.Background>
         <PasswordBox x:Name="Password" materialDesign:HintAssist.Hint="Password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" HorizontalAlignment="Left" Height="46" Margin="122,169,0,0" VerticalAlignment="Top" Width="296" Grid.Row="1" FontSize="14"  />
         <TextBox x:Name="UserName" materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}" HorizontalAlignment="Left" Height="56" Margin="120,54,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="298" Grid.Row="1" FontSize="14"/>
-        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Sign In" VerticalAlignment="Center" Height="37" Width="557" Foreground="White" Background="#FF04A1D1" FontSize="24" TextAlignment="Center" FontStyle="Italic" FontWeight="Bold" TextDecorations="{x:Null}" Margin="3,13,0,0" />
-        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Sign up" VerticalAlignment="Center" Height="38" Width="556" Foreground="White" Background="#FF2FF35B" FontSize="24" TextAlignment="Center" FontStyle="Italic" FontWeight="Bold" TextDecorations="{x:Null}" Margin="1,13,4,585" Grid.Column="1" Grid.RowSpan="2"/>
-        <Button Click="SignUp_Click" x:Name="SignUp" Content="Sign up" HorizontalAlignment="Left" Height="36" Margin="206,450,0,100" Grid.Row="1" VerticalAlignment="Center" Width="118" Background="#FF2FF35B" Grid.Column="1" BorderBrush="{x:Null}" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Sign In" VerticalAlignment="Center" Height="36" Width="557" Foreground="White" Background="#FF04A1D1" FontSize="24" TextAlignment="Center" FontStyle="Italic" FontWeight="Bold" TextDecorations="{x:Null}" Margin="3,54,0,0" />
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Sign up" VerticalAlignment="Center" Height="36" Width="560" Foreground="White" Background="#FF2FF35B" FontSize="24" TextAlignment="Center" FontStyle="Italic" FontWeight="Bold" TextDecorations="{x:Null}" Margin="0,54,0,0" Grid.Column="1"/>
+        <Button Click="SignUp_Click" x:Name="SignUp" Content="Sign up" HorizontalAlignment="Left" Height="40" Margin="206,444,0,91" Grid.Row="1" VerticalAlignment="Center" Width="118" Background="#FF2FF35B" Grid.Column="1" BorderBrush="{x:Null}" FontSize="20"/>
         <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="58" Margin="92,250,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="294" materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="14" />
         <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="53" Margin="96,57,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="294" materialDesign:HintAssist.Hint="Name" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="14"/>
         <PasswordBox Grid.Column="1" HorizontalAlignment="Left" Height="49" Margin="94,355,0,0" Grid.Row="1" VerticalAlignment="Top" Width="290" materialDesign:HintAssist.Hint="Password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" RenderTransformOrigin="0.491,2.122" FontSize="14"/>

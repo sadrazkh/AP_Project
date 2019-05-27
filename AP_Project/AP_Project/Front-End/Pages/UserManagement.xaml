@@ -6,7 +6,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:AP_Project.Front_End.Pages"
              mc:Ignorable="d" Height="665" Width="1120">
-    <Grid>
+    <Grid Height="665" Width="1120">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="Cyan"/>

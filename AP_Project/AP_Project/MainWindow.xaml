@@ -6,7 +6,7 @@
         xmlns:Signin="clr-namespace:AP_Project.Front_End.Pages"
         xmlns:local="clr-namespace:AP_Project"
         mc:Ignorable="d"
-        Title="MainWindow" Height="665" Width="1120">
+        Title="MainWindow" Height="665" Width="1120" ResizeMode="NoResize">
 
     <Grid x:Name="total">
         <StackPanel x:Name="head" Margin="0,2,-1,512" Height="120">
