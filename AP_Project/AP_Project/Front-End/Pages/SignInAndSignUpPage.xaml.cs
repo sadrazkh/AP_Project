@@ -28,23 +28,38 @@ namespace AP_Project.Front_End.Pages
         public UserManagement manager = new UserManagement();
         private void SignIn_Click(object sender, RoutedEventArgs e)
         {
-
-            if (Back_End.Func.Persons.AP_Project.Back_End.Func.Persons.Person.PersonLogin(UserName.Text, Password.Password)) 
+            try
             {
-                MainWindow win = (MainWindow)Window.GetWindow(this);
-                win.Visibility = Visibility.Visible;
-                win.sign.Visibility = Visibility.Hidden;
-                win.body.Children.Add(manager);
+                if (Back_End.Func.Persons.AP_Project.Back_End.Func.Persons.Person.PersonLogin(UserName.Text, Password.Password))
+                {
+                    MainWindow win = (MainWindow)Window.GetWindow(this);
+                    win.Visibility = Visibility.Visible;
+                    win.sign.Visibility = Visibility.Hidden;
+                   // win.body.Children.Add(manager);
+                }
             }
-            else
-            {
-                MessageBox.Show("Validation failed");
-            }
+            catch { MessageBox.Show("sik"); }
+            
         }
 
         private void SignUp_Click(object sender, RoutedEventArgs e)
         {
+            /*
+            try
+            {
+                if(func(NameUp.Text,PhoneUp.Text,EmailUp.Text,PasswordUp.Password))
+                {
+                    MainWindow win = (MainWindow)Window.GetWindow(this);
+                    win.Visibility = Visibility.Visible;
+                    win.sign.Visibility = Visibility.Hidden;
+                }
 
+            }
+            catch
+            {
+                MessageBox.Show("Ridi osgol");
+            }
+            */
         }
     }
 }
