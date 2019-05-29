@@ -47,7 +47,7 @@ namespace AP_Project.Front_End.Pages
 
             try
             {
-                //Back_End.Func.Persons.AP_Project.Back_End.Func.Persons.Person ob = new Back_End.Func.Persons.AP_Project.Back_End.Func.Persons.Person { };
+                Back_End.Func.Persons.AP_Project.Back_End.Func.Persons.Person ob = new Back_End.Func.Persons.AP_Project.Back_End.Func.Persons.Person { UserNameUp.Text, PasswordUp.Password, NameUp.Text, EmailUp.Text, PhoneUp.Text };
                 Back_End.MainRoot.SetRoot(ob); 
                 MainWindow win = (MainWindow)Window.GetWindow(this);
                 win.Visibility = Visibility.Visible;
