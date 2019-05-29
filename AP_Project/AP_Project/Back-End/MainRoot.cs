@@ -8,6 +8,15 @@ namespace AP_Project.Back_End
 {
     public sealed class MainRoot
     {
+        public static void SetRoot(Back_End.Modals.Persons.Person ob)
+        {
+            UserName = ob.UserName;
+            FullName = ob.FullName;
+            AccesAccessLevel = ob.AccessLevel;
+            Email = ob.Email;
+            PhoneNumber = ob.PhoneNumber;
+            Cart = ob.Cart;
+        }
         public static void SetRoot(string _UserName,string _FullName,short? _AccesAccessLevel,string _Email,string _PhoneNumber,List<Modals.Products.Product> _Cart)
         {
             UserName = _UserName;
