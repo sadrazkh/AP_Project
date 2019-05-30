@@ -9,15 +9,21 @@
         Title="MainWindow" Height="665" Width="1120" ResizeMode="NoResize">
 
     <Grid x:Name="total" Width="1120" Margin="0">
-        <StackPanel x:Name="head"  Width="1120" Height="60" Margin="0,0,0,576">
+        <StackPanel x:Name="head"  Width="1120" Height="60" Margin="0,0,0,576" >
             <Grid Margin="0">
-                <Button x:Name="Signoutbtn" Content="Sign out"   Margin="96,12,869,16" Click="Button_Click" Background="#FF1CCB0B" Visibility="Hidden"/>
-                <Button x:Name="Profilebtn" Content="Profile"   Margin="220,12,800,16" Click="Button_Click" Background="#FF1CCB0B" Visibility="Hidden"/>
-                <Button x:Name="Signinbtn" Content="Sign in / Sign up"   Margin="96,12,869,16" Click="Button_Click" Background="#FF1CCB0B"/>
-                <Label Content="Marsana" Grid.Row="0" FontSize="36" FontWeight="Bold" FontStyle="Italic" Margin="956,1,22,5" FontFamily="Impact" Foreground="DarkRed" />
+                <Button x:Name="Signinbtn" Content="Sign in / Sign up"   Margin="20,14,945,14" Click="Button_Click" Background="#FF1CCB0B"/>
+                <Label Content="Marsana" Grid.Row="0" FontSize="36" FontWeight="Bold" FontStyle="Italic" Margin="941,3,22,3" FontFamily="Impact" Foreground="DarkRed" />
             </Grid>
         </StackPanel>
-        <StackPanel x:Name="body" Width="1120" Margin="0,60,0,0"/>
+        <StackPanel x:Name="head2"  Width="1120" Height="60" Margin="0,0,0,576" Visibility="Hidden">
+            <Grid Margin="0">
+                <Button x:Name="Signoutbtn" Click="Signoutbtn_Click" Content="Sign out"   Margin="12,14,1014,14"  Background="#FF1CCB0B" />
+                <Button x:Name="Profilebtn" Content="Profile"   Margin="115,14,911,14" Click="Profilebtn_Click" Background="#FF1CCB0B" />
+                <Label Content="Marsana" Grid.Row="0" FontSize="36" FontWeight="Bold" FontStyle="Italic" Margin="940,2,4,4" FontFamily="Impact" Foreground="DarkRed" />
+            </Grid>
+        </StackPanel>
+        <StackPanel x:Name="body" Width="1120" Margin="0,60,0,0" Height="605">
+        </StackPanel>
     </Grid>
 
 

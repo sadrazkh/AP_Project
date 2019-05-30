@@ -25,7 +25,7 @@ namespace AP_Project.Front_End.Pages
         {
             InitializeComponent();
         }
-        public UserManagement manager = new UserManagement();
+        
         private void SignIn_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -34,7 +34,7 @@ namespace AP_Project.Front_End.Pages
                 {
                     MainWindow win = (MainWindow)Window.GetWindow(this);
                     win.sign.Visibility = Visibility.Hidden;
-                    win.head.Visibility = Visibility.Visible;
+                    win.head2.Visibility = Visibility.Visible;
                     
                    // win.body.Children.Add(manager);
                 }
@@ -60,6 +60,14 @@ namespace AP_Project.Front_End.Pages
                 MessageBox.Show("Ridi osgol");
             }
 
+        }
+
+
+        private void PhoneUp_PreviewTextInput_1(object sender, TextCompositionEventArgs e)
+        {
+            int a;
+            if (int.TryParse(e.Text, out a) == false)
+                e.Handled = true;
         }
     }
 }
