@@ -5,26 +5,20 @@
               xmlns:MaterialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:AP_Project.Front_End.Pages"
-             mc:Ignorable="d" Height="665" Width="1120">
-    <Grid Height="665" Width="1120">
-        <Grid.Background>
-            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="Cyan"/>
-                <GradientStop Color="#FFBBF0F0" Offset="0.417"/>
-            </LinearGradientBrush>
-        </Grid.Background>
-
-        <Label Content="اطلاعات شخصی" FontSize="24" Margin="927,8,12,590" FontFamily="Mongolian Baiti"/>
-        <TextBox Margin="582,324,119,300" Width="420" Height="40"/>
-        <TextBox Margin="582,187,119,437" Width="420" Height="40"/>
-        <TextBox Margin="581,250,120,374" Width="420" Height="40"/>
-        <TextBox Margin="582,400,119,224" Width="420" Height="40"/>
-        <Label Content="نام" Margin="1024,134,8,490" FontSize="18" />
-        <Label Content="نام کاربری" Width="100" Margin="1017,339,4,288" FontSize="18"/>
-        <Label Content="موبایل" Margin="1018,266,3,362" Width="100" FontSize="18"/>
-        <Label Content="ایمیل" Margin="1026,200,8,420" RenderTransformOrigin="1.022,0.959" FontSize="18"/>
-        <Label Content="رمز عبور" Width="100" Margin="1015,413,6,211" FontSize="18"/>
-        <Button Content="ویرایش" Margin="748,496,239,126" Height="Auto"/>
-        <TextBox Margin="582,114,119,510" Width="420" Height="40"/>
+             mc:Ignorable="d" Height="605" Width="1120">
+    <Grid Width="1120"  Height="605" Background="#FF0B0055">
+        <Grid Height="450" Background="#FF3316B4" Width="500" >
+            <Label Content="Full Name" Height="50" Margin="404,14,2,386" FontSize="18" Foreground="#DDFFFFFF" />
+            <Label Content="Phone Number" Height="50"  Margin="366,90,2,310" FontSize="18" Foreground="#DDFFFFFF"/>
+            <Label Content="Email" Height="50" Margin="436,170,2,230" FontSize="18" Foreground="#DDFFFFFF"/>
+            <Label Content="User Name" Height="50" Margin="396,250,0,150" FontSize="18" Foreground="#DDFFFFFF"/>
+            <Label Content="Password" Height="50" Margin="412,338,2,62" FontSize="18" Foreground="#DDFFFFFF"/>
+            <TextBox Width="250" Height="40" Margin="100,323,150,87" Foreground="White"/>
+            <TextBox Width="250" Height="40" Margin="100,236,150,174" Foreground="White"/>
+            <TextBox Width="250" Height="40" Margin="100,156,150,254" Foreground="White"/>
+            <TextBox Width="250" Height="40" Margin="100,74,150,336" Foreground="White"/>
+            <TextBox Width="250" Height="40" Margin="100,-2,150,412" Foreground="White"/>
+            <Button Content="Save Changes" Height="40" Margin="31,394,338,16"/>
+        </Grid>
     </Grid>
 </UserControl>

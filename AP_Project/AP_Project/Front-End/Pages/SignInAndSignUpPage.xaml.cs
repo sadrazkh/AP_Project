@@ -33,8 +33,9 @@ namespace AP_Project.Front_End.Pages
                 if (Back_End.Func.Persons.AP_Project.Back_End.Func.Persons.Person.PersonLogin(UserName.Text, Password.Password))
                 {
                     MainWindow win = (MainWindow)Window.GetWindow(this);
-                    win.Visibility = Visibility.Visible;
                     win.sign.Visibility = Visibility.Hidden;
+                    win.head.Visibility = Visibility.Visible;
+                    
                    // win.body.Children.Add(manager);
                 }
             }
