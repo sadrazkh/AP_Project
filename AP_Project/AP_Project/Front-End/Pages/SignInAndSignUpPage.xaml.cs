@@ -36,10 +36,10 @@ namespace AP_Project.Front_End.Pages
                     win.sign.Visibility = Visibility.Hidden;
                     win.head2.Visibility = Visibility.Visible;
                     
-                   // win.body.Children.Add(manager);
+                   
                 }
             }
-            catch { MessageBox.Show("sik"); }
+            catch { MessageBox.Show("something is wrong"); }
             
         }
 
@@ -57,7 +57,7 @@ namespace AP_Project.Front_End.Pages
             }
             catch
             {
-                MessageBox.Show("Ridi osgol");
+                MessageBox.Show("something is wrong");
             }
 
         }

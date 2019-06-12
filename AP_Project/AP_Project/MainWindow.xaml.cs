@@ -26,7 +26,7 @@ namespace AP_Project
             InitializeComponent();
         }
         public SignInAndSignUpPage sign = new SignInAndSignUpPage();
-        public UserManagement manager = new UserManagement();
+        public UserManagement manager2 = new UserManagement();
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             head.Visibility = Visibility.Hidden;                    
@@ -46,10 +46,10 @@ namespace AP_Project
 
         private void Profilebtn_Click(object sender, RoutedEventArgs e)
         {
-            head.Visibility = Visibility.Hidden;
+            //head.Visibility = Visibility.Hidden;
             head2.Visibility = Visibility.Hidden;
-            sign.Visibility = Visibility.Hidden;
-            body.Children.Add(manager);
+            //sign.Visibility = Visibility.Hidden;
+            body.Children.Add(manager2);
         }
 
         private void Signoutbtn_Click(object sender, RoutedEventArgs e)
