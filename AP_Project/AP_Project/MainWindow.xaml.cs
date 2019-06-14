@@ -30,7 +30,7 @@ namespace AP_Project
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             head.Visibility = Visibility.Hidden;                    
-            body.Children.Add(sign);
+            body.Children.Add(manager2);
         }
 
 

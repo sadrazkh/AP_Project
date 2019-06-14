@@ -6,23 +6,35 @@
         xmlns:Signin="clr-namespace:AP_Project.Front_End.Pages"
         xmlns:local="clr-namespace:AP_Project"
         mc:Ignorable="d"
-        Title="MainWindow" Height="665" Width="1120" ResizeMode="NoResize">
+        Title="MainWindow" Height="695" Width="1120" ResizeMode="NoResize">
 
-    <Grid x:Name="total" Width="1120" Margin="0">
-        <StackPanel x:Name="head"  Width="1120" Height="60" Margin="0,0,0,576" >
-            <Grid Margin="0">
+    <Grid x:Name="total" Width="1120" Margin="0" Height="665">
+        <StackPanel x:Name="head"  Width="1120" Height="60" Margin="0,0,0,605" >
+            <Grid Margin="0" Height="60">
                 <Button x:Name="Signinbtn" Content="Sign in / Sign up"   Margin="20,14,945,14" Click="Button_Click" Background="#FF1CCB0B"/>
-                <Label Content="Marsana" Grid.Row="0" FontSize="36" FontWeight="Bold" FontStyle="Italic" Margin="941,3,22,3" FontFamily="Impact" Foreground="DarkRed" />
+                <Label Content="Marsana" Grid.Row="0" FontSize="36" FontWeight="Bold" FontStyle="Italic" Margin="941,-3,22,9" FontFamily="Impact" Foreground="DarkRed" />
             </Grid>
         </StackPanel>
-        <StackPanel x:Name="head2"  Width="1120" Height="60" Margin="0,0,0,576" Visibility="Hidden">
+        <StackPanel x:Name="head2"  Width="1120" Height="60" Margin="0,0,0,605" Visibility="Hidden">
             <Grid Margin="0">
                 <Button x:Name="Signoutbtn" Click="Signoutbtn_Click" Content="Sign out"   Margin="12,14,1014,14"  Background="#FF1CCB0B" />
                 <Button x:Name="Profilebtn" Content="Profile"   Margin="115,14,911,14" Click="Profilebtn_Click" Background="#FF1CCB0B" />
                 <Label Content="Marsana" Grid.Row="0" FontSize="36" FontWeight="Bold" FontStyle="Italic" Margin="940,2,4,4" FontFamily="Impact" Foreground="DarkRed" />
             </Grid>
         </StackPanel>
-        <StackPanel x:Name="body" Width="1120" Margin="0,60,0,0" Height="605">
+        <StackPanel x:Name="body" Width="1120" Height="605" Margin="0,60,0,0">
+            <Grid Width="1120" Height="605" Margin="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+            </Grid>
         </StackPanel>
     </Grid>
 
