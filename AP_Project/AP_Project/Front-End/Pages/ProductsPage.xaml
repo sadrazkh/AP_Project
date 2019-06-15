@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="AP_Project.Front_End.Pages.ProductsPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AP_Project.Front_End.Pages"
+             mc:Ignorable="d" 
+             d:DesignHeight="605" d:DesignWidth="1120" Background="White">
+
+    <Grid x:Name="asli"  Width="1120" Height="605" Margin="0">
+        <Grid x:Name="a1" Width="1120" Height="60" Margin="0,0,0,545">
+            <Button Margin="30,15,940,15" Content="Sign Out" FontSize="18" Height="30" Width="130" Click="SignOutbtn_click" Background="#FF474747" BorderBrush="#FF474747"/>
+            <Button Margin="232,15,788,15" Content="Profile" FontSize="18" Height="30" Width="90" Click="Profilebtn" Background="#FF474747" BorderBrush="#FF474747"/>
+            <Label Content="Marsana" Height="50" FontSize="36" Width="240" Margin="880,0,0,0" FontWeight="Bold" FontStyle="Italic" FontFamily="Perpetua Titling MT" Foreground="#DD0042D1"/>
+        </Grid>
+        <Grid x:Name="a2" Width="1120" Height="545" Margin="0,60,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0" Grid.Row="0" Margin="0" Background="White">
+
+                <Image Source="AP_Project/Pictures/ASUS50.jpg" Grid.Column="0" Grid.Row="0" Margin="63,2,66,87"/>
+                <Label Content="لپ تاپ" Height="50" Margin="96,112,99,40" FontSize="14"/>
+
+            </Grid>
+            <Grid Grid.Column="1" Grid.Row="0" Margin="0">
+
+            </Grid>
+            <Grid Grid.Column="2" Grid.Row="0" Margin="0">
+
+            </Grid>
+            <Grid Grid.Column="0" Grid.Row="1" Margin="0">
+
+            </Grid>
+            <Grid Grid.Column="1" Grid.Row="1" Margin="0">
+
+            </Grid>
+            <Grid Grid.Column="2" Grid.Row="1" Margin="0">
+
+            </Grid>
+            <Grid Grid.Column="0" Grid.Row="2" Margin="0">
+
+            </Grid>
+            <Grid Grid.Column="1" Grid.Row="2" Margin="0">
+
+            </Grid>
+            <Grid Grid.Column="2" Grid.Row="2" Margin="0">
+
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

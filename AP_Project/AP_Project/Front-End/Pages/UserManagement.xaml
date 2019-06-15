@@ -6,7 +6,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:AP_Project.Front_End.Pages"
              mc:Ignorable="d" Height="605" Width="1120">
-    <Grid Width="1120"  Height="605" Background="#FF9C9C9C">
+    <Grid Width="1120"  Height="605" Background="#FF474747">
         <Grid Height="450" Background="#FF8D8D8D" Width="500" >
             <Label Content="Full Name" Height="50" Margin="404,14,2,386" FontSize="18" Foreground="#DDFFFFFF" />
             <Label Content="Phone Number" Height="50"  Margin="366,90,2,310" FontSize="18" Foreground="#DDFFFFFF"/>
@@ -18,7 +18,7 @@
             <TextBox Width="250" Height="40" Margin="100,156,150,254" Foreground="White"/>
             <TextBox Width="250" Height="40" Margin="100,74,150,336" Foreground="White"/>
             <TextBox Text="{Binding Path=UserName,ElementName=window}" Width="250" Height="40" Margin="100,-2,150,412" Foreground="White"/>
-            <Button Content="Save Changes And Return To Menu" Height="40" Margin="31,394,202,16"/>
+            <Button Content="Save Changes And Return To Menu" Height="40" Margin="31,394,202,16" Background="#FF474747" BorderBrush="#FF474747"/>
         </Grid>
     </Grid>
 </UserControl>

@@ -21,40 +21,13 @@ namespace AP_Project
     /// </summary>
     public partial class MainWindow : Window
     {
+        public SignInAndSignUpPage sign = new SignInAndSignUpPage();
         public MainWindow()
         {
             InitializeComponent();
+            body.Children.Add(sign);
         }
-        public SignInAndSignUpPage sign = new SignInAndSignUpPage();
-        public UserManagement manager2 = new UserManagement();
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            head.Visibility = Visibility.Hidden;                    
-            body.Children.Add(manager2);
-        }
-
-
-        private void TextBlock_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        public  void RemoveUserControler(UserControl Page)
-        {
-            
-        }
-
-        private void Profilebtn_Click(object sender, RoutedEventArgs e)
-        {
-            //head.Visibility = Visibility.Hidden;
-            head2.Visibility = Visibility.Hidden;
-            //sign.Visibility = Visibility.Hidden;
-            body.Children.Add(manager2);
-        }
-
-        private void Signoutbtn_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+        
+      
     }
 }
