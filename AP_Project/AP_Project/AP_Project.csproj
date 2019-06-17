@@ -275,6 +275,12 @@
   <ItemGroup>
     <Folder Include="Back_End\Func\Persons\" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ASUS50.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ASUSS7.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

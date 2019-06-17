@@ -26,12 +26,14 @@
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0" Grid.Row="0" Margin="0" Background="White">
 
-                <Image Source="AP_Project/Pictures/ASUS50.jpg" Grid.Column="0" Grid.Row="0" Margin="63,2,66,87"/>
-                <Label Content="لپ تاپ" Height="50" Margin="96,112,99,40" FontSize="14"/>
-
+                <Image Source="/Images/ASUS50.jpg" Grid.Column="0" Grid.Row="0" Margin="137,11,136,71" Width="100" Height="100"/>
+                <Label Content="لپ تاپ 15 اینچی ایسوس مدل راگ" Margin="46,98,45,46" FontSize="18"/>
+                <Label Content="51,000,000" Height="30" Margin="130,136,129,16" FontSize="18" Foreground="#DDFF0000" FontWeight="Bold"/>
             </Grid>
             <Grid Grid.Column="1" Grid.Row="0" Margin="0">
-
+                <Image Source="/Images/ASUSS7.jpg" Grid.Column="0" Grid.Row="0" Margin="137,11,136,71" Width="100" Height="100"/>
+                <Label Content="لپ تاپ 15 اینچی ایسوس مدل ویوو بوک" Margin="46,98,45,46" FontSize="18"/>
+                <Label Content="7,924,000" Height="30" Margin="130,136,129,16" FontSize="18" Foreground="#DDFF0000" FontWeight="Bold"/>
             </Grid>
             <Grid Grid.Column="2" Grid.Row="0" Margin="0">
 
