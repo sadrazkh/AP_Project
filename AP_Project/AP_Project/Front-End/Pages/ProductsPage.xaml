@@ -8,12 +8,14 @@
              d:DesignHeight="605" d:DesignWidth="1120" Background="White">
 
     <Grid x:Name="asli"  Width="1120" Height="605" Margin="0">
-        <Grid x:Name="a1" Width="1120" Height="60" Margin="0,0,0,545">
-            <Button Margin="30,15,940,15" Content="Sign Out" FontSize="18" Height="30" Width="130" Click="SignOutbtn_click" Background="#FF474747" BorderBrush="#FF474747"/>
-            <Button Margin="232,15,788,15" Content="Profile" FontSize="18" Height="30" Width="90" Click="Profilebtn" Background="#FF474747" BorderBrush="#FF474747"/>
+        <Grid x:Name="a1" Width="1120" Height="60" Margin="0,0,0,545" Background="#FF9C9C9C">
+            <Button Margin="40,14,970,12" Content="Sign Out" FontSize="18"  Height="33" Click="SignOutbtn_click" Background="#FF474747" BorderBrush="#FF474747"/>
+            <Button Margin="183,15,847,12" Content="Profile" FontSize="18" Height="33" Width="90" Click="Profilebtn" Background="#FF474747" BorderBrush="#FF474747"/>
             <Label Content="Marsana" Height="50" FontSize="36" Width="240" Margin="880,0,0,0" FontWeight="Bold" FontStyle="Italic" FontFamily="Perpetua Titling MT" Foreground="#DD0042D1"/>
+
         </Grid>
-        <Grid x:Name="a2" Width="1120" Height="545" Margin="0,60,0,0">
+        <Border BorderThickness="1" BorderBrush="Black">
+            <Grid x:Name="a2" Width="1120" Height="545" Margin="0,60,0,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
@@ -24,38 +26,56 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
+
             <Grid Grid.Column="0" Grid.Row="0" Margin="0" Background="White">
-
-                <Image Source="/Images/ASUS50.jpg" Grid.Column="0" Grid.Row="0" Margin="137,11,136,71" Width="100" Height="100"/>
+                <Image Source="/Images/ASUS50.jpg" Grid.Column="0" Grid.Row="0" Margin="137,3,136,79" Width="100" Height="100"/>
                 <Label Content="لپ تاپ 15 اینچی ایسوس مدل راگ" Margin="46,98,45,46" FontSize="18"/>
-                <Label Content="51,000,000" Height="30" Margin="130,136,129,16" FontSize="18" Foreground="#DDFF0000" FontWeight="Bold"/>
+                <Label Content="51,000,000" Height="30" Margin="130,138,129,14" FontSize="18" Foreground="#DDFF0000" FontWeight="Bold"/>
             </Grid>
-            <Grid Grid.Column="1" Grid.Row="0" Margin="0">
-                <Image Source="/Images/ASUSS7.jpg" Grid.Column="0" Grid.Row="0" Margin="137,11,136,71" Width="100" Height="100"/>
-                <Label Content="لپ تاپ 15 اینچی ایسوس مدل ویوو بوک" Margin="46,98,45,46" FontSize="18"/>
-                <Label Content="7,924,000" Height="30" Margin="130,136,129,16" FontSize="18" Foreground="#DDFF0000" FontWeight="Bold"/>
-            </Grid>
-            <Grid Grid.Column="2" Grid.Row="0" Margin="0">
 
+
+            <Grid Grid.Column="1" Grid.Row="0" Margin="0">
+                <Image Source="/Images/ASUSS7.jpg"  Margin="138,4,136,78" Width="100" Height="100"/>
+                <Label Content="لپ تاپ 15 اینچی ایسوس مدل ویوو بوک" Margin="46,98,45,46" FontSize="18"/>
+                <Label Content="7,924,000" Height="30" Margin="129,138,130,14" FontSize="18" Foreground="#DDFF0000" FontWeight="Bold"/>
+            </Grid>
+
+            <Grid Grid.Column="2" Grid.Row="0" Margin="0">
+                <Image Source="/Images/ASUSS19.jpg"  Margin="137,3,136,79" Width="100" Height="100"/>
+                <Label Content="ASUSS N580 لپتاپ " Margin="102,98,103,46" FontSize="18"/>
+                <Label Content="19,700,000" Height="30" Margin="129,138,130,14" FontSize="18" Foreground="#DDFF0000" FontWeight="Bold" />
             </Grid>
             <Grid Grid.Column="0" Grid.Row="1" Margin="0">
-
+                <Image Source="/Images/Apple13.jpg"  Margin="137,3,136,79" Width="100" Height="100"/>
+                <Label Content="MQD32 2017 لپ تاپ 13 اینچی مک بوک مدل" Margin="10,98,11,46" FontSize="18"/>
+                <Label Content="13,999,000" Height="30" Margin="129,138,130,14" FontSize="18" Foreground="#DDFF0000" FontWeight="Bold" />
             </Grid>
             <Grid Grid.Column="1" Grid.Row="1" Margin="0">
-
+                <Image Source="/Images/Acer9.jpg"  Margin="137,3,136,79" Width="100" Height="100"/>
+                <Label Content="aspire E5لپ تاپ 15 اینچی ایسر" Margin="62,99,62,45" FontSize="18"/>
+                <Label Content="9,700,000" Height="30" Margin="139,138,138,14" FontSize="18" Foreground="#DDFF0000" FontWeight="Bold" />
             </Grid>
             <Grid Grid.Column="2" Grid.Row="1" Margin="0">
-
+                <Image Source="/Images/ASUSS18.jpg"  Margin="137,3,136,79" Width="100" Height="100"/>
+                <Label Content="ASUSS zenbook ux لپتاپ " Margin="82,98,81,46" FontSize="18"/>
+                <Label Content="18,100,000" Height="30" Margin="135,138,133,14" FontSize="18" Foreground="#DDFF0000" FontWeight="Bold" />
             </Grid>
             <Grid Grid.Column="0" Grid.Row="2" Margin="0">
-
+                <Image Source="/Images/ASUSS13.jpg"  Margin="137,3,136,79" Width="100" Height="100"/>
+                <Label Content="ASUSS zenbook UXA لپتاپ " Margin="74,98,74,46" FontSize="18"/>
+                <Label Content="13,750,000" Height="30" Margin="135,138,135,14" FontSize="18" Foreground="#DDFF0000" FontWeight="Bold" />
             </Grid>
             <Grid Grid.Column="1" Grid.Row="2" Margin="0">
-
+                <Image Source="/Images/MICROSOFT14.jpg"  Margin="137,3,136,79" Width="100" Height="100"/>
+                <Label Content="surface laptop-E لپ تاپ 13 اینچی " Margin="50,98,48,46" FontSize="18" />
+                <Label Content="19,700,000" Height="30" Margin="135,138,134,14" FontSize="18" Foreground="#DDFF0000" FontWeight="Bold" />
             </Grid>
             <Grid Grid.Column="2" Grid.Row="2" Margin="0">
-
+                <Image Source="/Images/xiaomi20.jpg"  Margin="137,3,136,79" Width="100" Height="100"/>
+                <Label Content="G5771 لپ تاپ 15.6 اینچی شیاومی مدل" Margin="102,98,103,46" FontSize="18"/>
+                <Label Content="20,538,000" Height="30" Margin="133,138,135,14" FontSize="18" Foreground="#DDFF0000" FontWeight="Bold" />
             </Grid>
         </Grid>
+        </Border>
     </Grid>
 </UserControl>

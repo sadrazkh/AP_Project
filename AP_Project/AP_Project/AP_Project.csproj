@@ -281,6 +281,27 @@
   <ItemGroup>
     <Resource Include="Images\ASUSS7.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ASUSS19.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Apple13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Acer9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ASUSS18.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ASUSS13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MICROSOFT14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\xiaomi20.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
