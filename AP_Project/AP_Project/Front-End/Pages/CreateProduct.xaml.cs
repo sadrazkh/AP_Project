@@ -12,9 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System;
 using System.IO;
-using System.Windows;
 using Microsoft.Win32;
 
 namespace AP_Project.Front_End.Pages
@@ -31,9 +29,10 @@ namespace AP_Project.Front_End.Pages
 
         private void SelectImage_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.ShowDialog();
-            
+            OpenFileDialog op = new OpenFileDialog();
+            if (op.ShowDialog() == true)
+                txtbx.Text = op.FileName;
+
         }
     }
 }

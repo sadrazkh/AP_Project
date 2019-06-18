@@ -7,9 +7,10 @@
              mc:Ignorable="d" 
              d:DesignHeight="605" d:DesignWidth="1120" Background="White">
     <Grid Background="#FF9C9C9C">
-        <Button Content="Enter to Create User Page"  Width="500" Height="60" Margin="310,110,310,435" Background="#FF474747" BorderBrush="#FF474747"/>
-        <Button Content="Enter to Show all users" Width="500" Height="60" Margin="310,288,310,257" Background="#FF474747" BorderBrush="#FF474747"/>
-        <Button Content="Enter to Edit Products Page"   Width="500" Height="60" Margin="310,374,310,171" Background="#FF474747" BorderBrush="#FF474747"/>
-        <Button Content="Enter to Edit Users Information Page" Width="500" Height="60" Margin="310,198,310,347" Background="#FF474747" BorderBrush="#FF474747"/>
+        <Button Click="createuserbtn" Content="Enter to Create User Page"  Width="500" Height="60" Margin="310,110,310,435" Background="#FF474747" BorderBrush="#FF474747"/>
+        <Button Click="showallusersbtn" Content="Enter to Show all users" Width="500" Height="60" Margin="310,288,310,257" Background="#FF474747" BorderBrush="#FF474747"/>
+        <Button Click="editproductsbtn" Content="Enter to Edit Products Page"   Width="500" Height="60" Margin="310,374,310,171" Background="#FF474747" BorderBrush="#FF474747"/>
+        <Button Click="editusersinformation" Content="Enter to Edit Users Information Page" Width="500" Height="60" Margin="310,198,310,347" Background="#FF474747" BorderBrush="#FF474747"/>
+        <Button Click="addproduct" Content="Add product" Width="500" Height="60"  Background="#FF474747" BorderBrush="#FF474747" Margin="310,464,310,81"/>
     </Grid>
 </UserControl>

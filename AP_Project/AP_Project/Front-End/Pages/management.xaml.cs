@@ -20,9 +20,37 @@ namespace AP_Project.Front_End.Pages
     /// </summary>
     public partial class management : UserControl
     {
+        public CreateProduct cproduct = new CreateProduct();
         public management()
         {
             InitializeComponent();
+        }
+
+        private void addproduct(object sender, RoutedEventArgs e)
+        {
+            MainWindow win = (MainWindow)Window.GetWindow(this);
+      
+            win.body.Children.Add(cproduct);
+        }
+
+        private void editproductsbtn(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void showallusersbtn(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void editusersinformation(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void createuserbtn(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

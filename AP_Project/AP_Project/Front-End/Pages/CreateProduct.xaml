@@ -7,7 +7,16 @@
              mc:Ignorable="d" 
              d:DesignHeight="605" d:DesignWidth="1120" Background="White">
     <Grid Background="#FF9C9C9C">
-        <Label Width="100" Content="تصویر" FontSize="18" Margin="979,73,41,486"/>
-        <Button Content="انتخاب" Width="100" Height="40" Margin="858,72,162,493" Click="SelectImage_Click"/>
+       
+        <Button Content="انتخاب تصویر" Width="100" Height="40" Margin="908,110,112,455" Click="SelectImage_Click" Background="#FF474747" BorderBrush="#FF474747"/>
+        <TextBox Name="txtbx" Width="500" Height="40" Margin="352,106,268,459" />
+        <Label Width="100" Height="50" Content="بارکد محصول" Margin="1020 ,100,0,455"/>
+        <TextBox Width="100"/>
+        <Label Content="نام محصول"/>
+        <TextBox/>
+        <Label Content="فروشگاه"/>
+        <TextBox/>
+        <Label Content="توضیحات"/>
+        <TextBox/>
     </Grid>
 </UserControl>
