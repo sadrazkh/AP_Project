@@ -5,18 +5,18 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:AP_Project.Front_End.Pages"
              mc:Ignorable="d" 
-             d:DesignHeight="605" d:DesignWidth="1120" Background="White">
-    <Grid Background="#FF9C9C9C">
-       
-        <Button Content="انتخاب تصویر" Width="100" Height="40" Margin="908,110,112,455" Click="SelectImage_Click" Background="#FF474747" BorderBrush="#FF474747"/>
-        <TextBox Name="txtbx" Width="500" Height="40" Margin="352,106,268,459" />
-        <Label Width="100" Height="50" Content="بارکد محصول" Margin="1020 ,100,0,455"/>
-        <TextBox Width="100"/>
-        <Label Content="نام محصول"/>
-        <TextBox/>
-        <Label Content="فروشگاه"/>
-        <TextBox/>
-        <Label Content="توضیحات"/>
-        <TextBox/>
+             d:DesignHeight="605" d:DesignWidth="1120" Background="#FF9C9C9C">
+    <Grid Width="1120" Height="605" Margin="0">
+        <TextBox Name="txtbx" Width="500" Height="40" Margin="404,64,216,501" />
+        <Button  FontFamily="Mj_Sudan Bold" Click="selectimg_click" Content="انتخاب تصویر" Height="40" Background="#FF474747" BorderBrush="#FF474747" Foreground="White" Margin="935,81,66,484" FontWeight="Bold" FontStyle="Italic"/>
+        <Label  FontFamily="Mj_Sudan Bold" Width="100" Content="بارکد محصول" Height="40" Margin="954,238,66,327" RenderTransformOrigin="0.94,-1.244" FontSize="14" FontWeight="Bold" FontStyle="Italic"/>
+        <TextBox Name="prname" Height="40" Margin="404,151,216,414"/>
+        <Label Content="نام محصول" Width="100" Height="40" Margin="954,164,66,401" FontSize="14" FontWeight="Bold" FontStyle="Italic" FontFamily="Mj_Sudan Bold"/>
+        <TextBox Name="prbarcode" Height="40" Margin="404,225,216,340"/>
+        <Label Content="توضیحات" Width="100" Height="40" Margin="954,434,66,131" FontSize="14" FontWeight="Bold" FontStyle="Italic"  FontFamily="Mj_Sudan Bold"/>
+        <TextBox TextWrapping="Wrap" Name="prexplanation" Margin="294,382,196,150"/>
+        <Label  FontFamily="Mj_Sudan Bold" Content="شرکت سازنده" Width="100" Height="40" Margin="954,336,66,229" FontWeight="Bold" FontStyle="Italic" FontSize="14"/>
+        <TextBox Name="prcompani" Height="40" Margin="404,322,216,243"/>
+        <Button Width="100" Height="40" Content="Create" Margin="954,535,66,30" Background="#FF474747" BorderBrush="#FF474747"/>
     </Grid>
 </UserControl>

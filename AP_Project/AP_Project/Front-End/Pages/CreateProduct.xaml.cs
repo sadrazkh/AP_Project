@@ -27,12 +27,18 @@ namespace AP_Project.Front_End.Pages
             InitializeComponent();
         }
 
-        private void SelectImage_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void selectimg_click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog op = new OpenFileDialog();
-            if (op.ShowDialog() == true)
+            if(op.ShowDialog()==true)
+            {
                 txtbx.Text = op.FileName;
-
+            }
         }
     }
 }
