@@ -17,6 +17,6 @@
         <TextBox TextWrapping="Wrap" Name="prexplanation" Margin="294,382,196,150"/>
         <Label  FontFamily="Mj_Sudan Bold" Content="شرکت سازنده" Width="100" Height="40" Margin="954,336,66,229" FontWeight="Bold" FontStyle="Italic" FontSize="14"/>
         <TextBox Name="prcompani" Height="40" Margin="404,322,216,243"/>
-        <Button Width="100" Height="40" Content="Create" Margin="954,535,66,30" Background="#FF474747" BorderBrush="#FF474747"/>
+        <Button Click="createbtn_click" Width="100" Height="40" Content="Create" Margin="954,535,66,30" Background="#FF474747" BorderBrush="#FF474747"/>
     </Grid>
 </UserControl>
