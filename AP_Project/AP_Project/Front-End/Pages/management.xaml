@@ -6,10 +6,10 @@
              xmlns:local="clr-namespace:AP_Project.Front_End.Pages"
              mc:Ignorable="d" 
              d:DesignHeight="605" d:DesignWidth="1120" Background="White">
-    <Grid>
-        <Button Content="Enter to Create User Page"  Width="500" Height="60" Margin="310,110,310,435"/>
-        <Button Content="Enter to Show all users" Width="500" Height="60" Margin="310,288,310,257"/>
-        <Button Content="Enter to Edit Products Page"   Width="500" Height="60" Margin="310,374,310,171"/>
-        <Button Content="Enter to Edit Users Information Page" Width="500" Height="60" Margin="310,198,310,347"/>
+    <Grid Background="#FF9C9C9C">
+        <Button Content="Enter to Create User Page"  Width="500" Height="60" Margin="310,110,310,435" Background="#FF474747" BorderBrush="#FF474747"/>
+        <Button Content="Enter to Show all users" Width="500" Height="60" Margin="310,288,310,257" Background="#FF474747" BorderBrush="#FF474747"/>
+        <Button Content="Enter to Edit Products Page"   Width="500" Height="60" Margin="310,374,310,171" Background="#FF474747" BorderBrush="#FF474747"/>
+        <Button Content="Enter to Edit Users Information Page" Width="500" Height="60" Margin="310,198,310,347" Background="#FF474747" BorderBrush="#FF474747"/>
     </Grid>
 </UserControl>

@@ -12,19 +12,27 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using AP_Project.Back_End;
+using System;
+using System.IO;
+using System.Windows;
+using Microsoft.Win32;
 
 namespace AP_Project.Front_End.Pages
 {
     /// <summary>
-    /// Interaction logic for UserManagement.xaml
+    /// Interaction logic for CreateProduct.xaml
     /// </summary>
-    public partial class UserManagement : UserControl
+    public partial class CreateProduct : UserControl
     {
-       
-        public UserManagement()
+        public CreateProduct()
         {
             InitializeComponent();
+        }
+
+        private void SelectImage_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.ShowDialog();
             
         }
     }

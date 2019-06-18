@@ -144,6 +144,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Front-End\Pages\CreateProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Front-End\Pages\CreateUserPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -205,6 +209,9 @@
     <Compile Include="Back-End\Modals\Products\Cars.cs" />
     <Compile Include="Back-End\Modals\Products\Product.cs" />
     <Compile Include="Back-End\Security\Hash_SHA256.cs" />
+    <Compile Include="Front-End\Pages\CreateProduct.xaml.cs">
+      <DependentUpon>CreateProduct.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Front-End\Pages\CreateUserPage.xaml.cs">
       <DependentUpon>CreateUserPage.xaml</DependentUpon>
     </Compile>
