@@ -43,7 +43,7 @@ namespace AP_Project.Front_End.Pages
 
         private void createbtn_click(object sender, RoutedEventArgs e)
         {
-            
+            //Back_End.Func.Products.Product Pro = new Back_End.Func.Products.Product(string Name, int store, string ProductPhotoAdress, string Explanations, string Category, string ManuFacturer, int PB);
         }
     }
 }
