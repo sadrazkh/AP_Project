@@ -8,7 +8,7 @@ namespace AP_Project.Back_End.Func.Products
 {
     public class Product : Modals.Products.Product
     {
-        Product(string Name,int store,string ProductPhotoAdress,string Explanations,string Category,string ManuFacturer,int PB)
+        public Product(string Name,int store,string ProductPhotoAdress,string Explanations,string Category,string ManuFacturer,int PB)
         {
             ConectionToDb.AddNewProduct(Name, store, ProductPhotoAdress, Explanations, Category, ManuFacturer, PB);
         }

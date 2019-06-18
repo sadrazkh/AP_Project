@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
 using Microsoft.Win32;
+using AP_Project.Back_End.Func.Products;
 
 namespace AP_Project.Front_End.Pages
 {
@@ -43,7 +44,21 @@ namespace AP_Project.Front_End.Pages
 
         private void createbtn_click(object sender, RoutedEventArgs e)
         {
-            //Back_End.Func.Products.Product Pro = new Back_End.Func.Products.Product(string Name, int store, string ProductPhotoAdress, string Explanations, string Category, string ManuFacturer, int PB);
+            Back_End.Func.Products.Product Pro = new Back_End.Func.Products.Product(prname.Text,Convert.ToInt32(prtedad.Text),"null",prexplanation.Text,"null",prcompani.Text, Convert.ToInt32(prbarcode.Text));
+        }
+
+        private void Prtedad_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            int a;
+            if (int.TryParse(e.Text, out a) == false)
+                e.Handled = true;
+        }
+
+        private void Prbarcode_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            int a;
+            if (int.TryParse(e.Text, out a) == false)
+                e.Handled = true;
         }
     }
 }

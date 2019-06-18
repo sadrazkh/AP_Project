@@ -9,14 +9,16 @@
     <Grid Width="1120" Height="605" Margin="0">
         <TextBox Name="txtbx" Width="500" Height="40" Margin="404,64,216,501" />
         <Button  FontFamily="Mj_Sudan Bold" Click="selectimg_click" Content="انتخاب تصویر" Height="40" Background="#FF474747" BorderBrush="#FF474747" Foreground="White" Margin="935,81,66,484" FontWeight="Bold" FontStyle="Italic"/>
-        <Label  FontFamily="Mj_Sudan Bold" Width="100" Content="بارکد محصول" Height="40" Margin="954,238,66,327" RenderTransformOrigin="0.94,-1.244" FontSize="14" FontWeight="Bold" FontStyle="Italic"/>
-        <TextBox Name="prname" Height="40" Margin="404,151,216,414"/>
-        <Label Content="نام محصول" Width="100" Height="40" Margin="954,164,66,401" FontSize="14" FontWeight="Bold" FontStyle="Italic" FontFamily="Mj_Sudan Bold"/>
-        <TextBox Name="prbarcode" Height="40" Margin="404,225,216,340"/>
-        <Label Content="توضیحات" Width="100" Height="40" Margin="954,434,66,131" FontSize="14" FontWeight="Bold" FontStyle="Italic"  FontFamily="Mj_Sudan Bold"/>
-        <TextBox TextWrapping="Wrap" Name="prexplanation" Margin="294,382,196,150"/>
-        <Label  FontFamily="Mj_Sudan Bold" Content="شرکت سازنده" Width="100" Height="40" Margin="954,336,66,229" FontWeight="Bold" FontStyle="Italic" FontSize="14"/>
-        <TextBox Name="prcompani" Height="40" Margin="404,322,216,243"/>
-        <Button Click="createbtn_click" Width="100" Height="40" Content="Create" Margin="954,535,66,30" Background="#FF474747" BorderBrush="#FF474747"/>
+        <Label  FontFamily="Mj_Sudan Bold" Width="100" Content="بارکد محصول" Height="40" Margin="954,219,66,346" RenderTransformOrigin="0.94,-1.244" FontSize="14" FontWeight="Bold" FontStyle="Italic"/>
+        <TextBox Name="prname" Height="40" Margin="404,135,216,430"/>
+        <Label Content="نام محصول" Width="100" Height="40" Margin="954,149,66,416" FontSize="14" FontWeight="Bold" FontStyle="Italic" FontFamily="Mj_Sudan Bold"/>
+        <TextBox PreviewTextInput="Prbarcode_PreviewTextInput" Name="prbarcode" Height="40" Margin="404,207,216,358"/>
+        <Label Content="توضیحات" Width="100" Height="40" Margin="954,405,66,160" FontSize="14" FontWeight="Bold" FontStyle="Italic"  FontFamily="Mj_Sudan Bold"/>
+        <TextBox TextWrapping="Wrap" Name="prexplanation" Margin="294,362,196,170"/>
+        <Label  FontFamily="Mj_Sudan Bold" Content="شرکت سازنده" Width="100" Height="40" Margin="954,311,66,254" FontWeight="Bold" FontStyle="Italic" FontSize="14"/>
+        <TextBox Name="prcompani" Height="40" Margin="404,295,216,270"/>
+        <Button Click="createbtn_click" Height="40" Content="Create" Margin="777,534,85,31" Background="#FF474747" BorderBrush="#FF474747"/>
+        <Label FontFamily="Mj_Sudan Bold" FontSize="14" Height="40" Content="تعداد" Margin="954,470,108,95"/>
+        <TextBox PreviewTextInput="Prtedad_PreviewTextInput" Name="prtedad" Width="100" Height="40" Margin="804,450,216,115"/>
     </Grid>
 </UserControl>
