@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AP_Project.Back_End
 {
-    public sealed class MainRoot
+    public class MainRoot
     {
         public static void SetRoot(Back_End.Modals.Persons.Person ob)
         {
@@ -27,7 +27,7 @@ namespace AP_Project.Back_End
             Cart = _Cart;
         }
 
-        public static string UserName { get; set; }
+        public static string UserName  { get; set; }
         public static string FullName { get; set; }
         public static short? AccesAccessLevel { get; set; }
         public static string Email { get; set; }

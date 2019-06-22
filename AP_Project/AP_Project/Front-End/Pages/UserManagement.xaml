@@ -5,10 +5,11 @@
               xmlns:MaterialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:AP_Project.Front_End.Pages"
-             xmlns:local2="clr-namespace:AP_Project.Back_End"
+             xmlns:local2="clr-namespace:AP_Project.Back_End.MainRoot"
              mc:Ignorable="d" Height="605" Width="1120">
     <UserControl.Resources>
-        <ObjectDataProvider x:Key="MainRoot" ObjectType="{x:Type local2:MainRoot}" MethodName="get_UserName"></ObjectDataProvider>
+        <!--<ObjectDataProvider x:Key="MainRoot" ObjectType="{x:Type local2:MainRoot}" MethodName="get_UserName"></ObjectDataProvider>-->
+        <local2:MainRoot x:Name="Zahar"></local2:MainRoot>
     </UserControl.Resources>
     <Grid x:Name="mygrid" Width="1120"  Height="605" Background="#FF474747">
         <Grid Height="450" Background="#FF8D8D8D" Width="500" >
@@ -21,7 +22,7 @@
             <TextBox Width="250" Height="40" Margin="100,236,150,174" Foreground="White"/>
             <TextBox Width="250" Height="40" Margin="100,156,150,254" Foreground="White"/>
             <TextBox Width="250" Height="40" Margin="100,74,150,336" Foreground="White"/>
-            <TextBox Text="{Binding Source= {StaticResource MainRoot},Path=UserName}" Width="250" Height="40" Margin="100,-2,150,412" Foreground="White"/>
+            <TextBox Text="{Binding Source={StaticResource Zahar} , Path=UserName}" Width="250" Height="40" Margin="100,-2,150,412" Foreground="White"/>
             <Button Content="Save Changes And Return To Menu" Height="40" Margin="31,394,202,16" Background="#FF474747" BorderBrush="#FF474747"/>
         </Grid>
     </Grid>
