@@ -25,7 +25,6 @@ namespace AP_Project.Front_End.Pages
         public UserManagement()
         {
             InitializeComponent();
-            MainRoot.UserName = "sadrad";
         }
     }
 }

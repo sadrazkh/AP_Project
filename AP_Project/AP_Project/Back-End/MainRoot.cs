@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AP_Project.Back_End
 {
-    public class MainRoot
+    public sealed class MainRoot
     {
         public static void SetRoot(Back_End.Modals.Persons.Person ob)
         {
