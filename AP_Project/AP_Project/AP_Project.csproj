@@ -254,6 +254,10 @@
     <Compile Include="Migrations\20190708072228_sadra.designer.cs">
       <DependentUpon>20190708072228_sadra.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20190707123926_ali.cs" />
+    <Compile Include="Migrations\20190707123926_ali.designer.cs">
+      <DependentUpon>20190707123926_ali.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\ContextModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

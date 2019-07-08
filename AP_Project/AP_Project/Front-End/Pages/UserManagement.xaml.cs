@@ -26,5 +26,11 @@ namespace AP_Project.Front_End.Pages
         {
             InitializeComponent();
         }
+        //public ProductsPage pr1 = new ProductsPage();
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow win = (MainWindow)Window.GetWindow(this);
+            
+        }
     }
 }
