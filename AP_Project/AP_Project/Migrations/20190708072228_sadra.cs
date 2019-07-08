@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace AP_Project.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class sadra : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -14,6 +14,7 @@ namespace AP_Project.Migrations
                     PersonId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     AccessLevel = table.Column<short>(nullable: true),
+                    RecoveryCode = table.Column<string>(nullable: true),
                     FullName = table.Column<string>(nullable: true),
                     Email = table.Column<string>(nullable: true),
                     PhoneNumber = table.Column<string>(nullable: true),

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace AP_Project.Back_End.Func.Persons
 {
@@ -16,6 +17,9 @@ namespace AP_Project.Back_End.Func.Persons
     {
         public class Person : Modals.Persons.Person
         {
+            public static int len {get;  set; }
+            public static int RamControler {get;  set; }
+
             public Person(string Us, string Pas, string _FullName, string _Email, string _PhoneNumber)
             {
                 bool Creat = false;
@@ -99,7 +103,6 @@ namespace AP_Project.Back_End.Func.Persons
                     throw ex;
                 }
             }
-
             public  void ChangePersonPass(string OldPass, string NewPass)
             {
                 using (var db = new Modals.Context())
@@ -161,9 +164,35 @@ namespace AP_Project.Back_End.Func.Persons
             {
                 return true;
             }
-
-            public static void PersonGen(int len,int RamControler = 20)
+            public static void PersonGen()
             {
+
+                Modals.Persons.Person[] Pr = new Modals.Persons.Person[RamControler];
+                for (int i = 0; i < len; i++)
+                {
+                    for (int j = 0; j < RamControler; j++)
+                    {
+                        Pr[j] = new Modals.Persons.Person { FullName = RandomGen.GetFulNameDefault(), Password = RandomGen.GetPasswordDefault(8), AccessLevel = 1 };
+                    }
+                    for (int j = 0; j < RamControler; j++)
+                    {
+                        try
+                        {
+                            ConectionToDb.AddNewPeronNoLimited(Pr, RamControler);
+                        }
+                        catch (Exception ex)
+                        {
+
+                            throw ex;
+                        }
+                    }
+                }
+            }
+            public static void PersonGen(int Len = 100, int ramControler = 20)
+            {
+                len = Len;
+                RamControler = ramControler;
+
                 Modals.Persons.Person[] Pr = new Modals.Persons.Person[RamControler];
                 for (int i = 0; i < len; i++)
                 {
@@ -185,12 +214,25 @@ namespace AP_Project.Back_End.Func.Persons
                     }
                 }
             }
-
-            public static bool PasswordRecovery()
+            public static void PersonGenThread(int Len = 100,int ramControler = 20)
+            {
+                len = Len;
+                RamControler = ramControler;
+                Thread Th = new Thread(PersonGen);
+                Th.Start();
+            }
+            public static bool PasswordRecovery(string username)
             {
                 try
                 {
-
+                    using (var db = new Modals.Context())
+                    {
+                        var res = db.Persons.Where(i => i.UserName == username).FirstOrDefault();
+                        string Rec = RandomGen.GetPasswordDefault(8);
+                        res.RecoveryCode = Rec;
+                        Security.MailSender.MailSend(res.Email, Rec);
+                        db.SaveChanges();
+                    }
                     return true;
                 }
                 catch (Exception)
@@ -199,6 +241,33 @@ namespace AP_Project.Back_End.Func.Persons
                     throw;
                 }
                 
+            }
+            public static bool PasswordRecovery(string username,string RecoveryCode,string NewPassword)
+            {
+                try
+                {
+                    using (var db = new Modals.Context())
+                    {
+                        var res = db.Persons.Where(i => i.UserName == username).FirstOrDefault();
+                        if (res.RecoveryCode == RecoveryCode)
+                        {
+                            string Pass = Security.Hash_SHA256.CreatHash256(NewPassword);
+                            res.Password = Pass;
+                            db.SaveChanges();
+                        }
+                        else
+                        {
+                            throw new Exception("Your code incorect!");
+                        }
+                    }
+                    return true;
+                }
+                catch (Exception)
+                {
+                    return false;
+                    throw;
+                }
+
             }
         }
     }

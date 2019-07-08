@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AP_Project.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20190527131038_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20190708072228_sadra")]
+    partial class sadra
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -36,6 +36,8 @@ namespace AP_Project.Migrations
                     b.Property<string>("Password");
 
                     b.Property<string>("PhoneNumber");
+
+                    b.Property<string>("RecoveryCode");
 
                     b.Property<string>("UserName");
 

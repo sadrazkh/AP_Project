@@ -35,6 +35,8 @@ namespace AP_Project.Migrations
 
                     b.Property<string>("PhoneNumber");
 
+                    b.Property<string>("RecoveryCode");
+
                     b.Property<string>("UserName");
 
                     b.HasKey("PersonId");

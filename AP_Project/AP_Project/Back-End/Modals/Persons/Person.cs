@@ -10,6 +10,7 @@ namespace AP_Project.Back_End.Modals.Persons
     {
         public int PersonId { get; set; }
         public short? AccessLevel { get; set; }
+        public string RecoveryCode { get; set; }
         public string FullName { get; set; }
         public string Email { get; set; }
         public string PhoneNumber { get; set; }

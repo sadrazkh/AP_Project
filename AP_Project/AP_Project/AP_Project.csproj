@@ -250,9 +250,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\20190527131038_InitialCreate.cs" />
-    <Compile Include="Migrations\20190527131038_InitialCreate.designer.cs">
-      <DependentUpon>20190527131038_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\20190708072228_sadra.cs" />
+    <Compile Include="Migrations\20190708072228_sadra.designer.cs">
+      <DependentUpon>20190708072228_sadra.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\ContextModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
