@@ -202,6 +202,7 @@
     <Compile Include="Back-End\Func\Persons\Manager.cs" />
     <Compile Include="Back-End\Func\Persons\Person.cs" />
     <Compile Include="Back-End\Func\Products\Product.cs" />
+    <Compile Include="Back-End\Func\RandomGen.cs" />
     <Compile Include="Back-End\MainRoot.cs" />
     <Compile Include="Back-End\Modals\Context.cs" />
     <Compile Include="Back-End\Modals\Persons\Manager.cs" />
@@ -209,6 +210,7 @@
     <Compile Include="Back-End\Modals\Products\Cars.cs" />
     <Compile Include="Back-End\Modals\Products\Product.cs" />
     <Compile Include="Back-End\Security\Hash_SHA256.cs" />
+    <Compile Include="Back-End\Security\MailSender.cs" />
     <Compile Include="Front-End\Pages\CreateProduct.xaml.cs">
       <DependentUpon>CreateProduct.xaml</DependentUpon>
     </Compile>
