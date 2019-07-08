@@ -8,6 +8,17 @@ namespace AP_Project.Back_End.Func
 {
     public class ConectionToDb
     {
+        public static void AddNewPeronNoLimited(Modals.Persons.Person[] Pr , int PrLen)
+        {
+            using (var db = new Modals.Context())
+            {
+                for (int i = 0; i < PrLen; i++)
+                {
+                    db.Persons.Add(Pr[i]);
+                }
+                db.SaveChanges();
+            }
+        }
         public static void AddNewProduct(string Name, int store, string ProductPhotoAdress, string Explanations, string Category, string ManuFacturer, int PB)
         {
             using (var db = new Modals.Context())

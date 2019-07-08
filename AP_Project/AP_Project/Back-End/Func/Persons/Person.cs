@@ -161,6 +161,45 @@ namespace AP_Project.Back_End.Func.Persons
             {
                 return true;
             }
+
+            public static void PersonGen(int len,int RamControler = 20)
+            {
+                Modals.Persons.Person[] Pr = new Modals.Persons.Person[RamControler];
+                for (int i = 0; i < len; i++)
+                {
+                    for (int j = 0; j < RamControler; j++)
+                    {
+                        Pr[j] =new Modals.Persons.Person { FullName = RandomGen.GetFulNameDefault(), Password = RandomGen.GetPasswordDefault(8) , AccessLevel = 1 }; 
+                    }
+                    for (int j = 0; j < RamControler; j++)
+                    {
+                        try
+                        {
+                            ConectionToDb.AddNewPeronNoLimited(Pr, RamControler);
+                        }
+                        catch (Exception ex)
+                        {
+
+                            throw ex;
+                        }
+                    }
+                }
+            }
+
+            public static bool PasswordRecovery()
+            {
+                try
+                {
+
+                    return true;
+                }
+                catch (Exception)
+                {
+                    return false;
+                    throw;
+                }
+                
+            }
         }
     }
 }
