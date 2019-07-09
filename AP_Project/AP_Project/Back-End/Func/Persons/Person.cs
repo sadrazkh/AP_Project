@@ -188,7 +188,7 @@ namespace AP_Project.Back_End.Func.Persons
                     }
                 }
             }
-            public static void PersonGen(int Len = 100, int ramControler = 20)
+            public static void PersonGen(int Len , int ramControler  )
             {
                 len = Len;
                 RamControler = ramControler;
@@ -266,6 +266,20 @@ namespace AP_Project.Back_End.Func.Persons
                 {
                     return false;
                     throw;
+                }
+
+            }
+            public static void PersonGene(int count)
+            {
+                Modals.Persons.Person Pr = new Modals.Persons.Person();
+                using (var db = new Modals.Context())
+                {
+                    for (int i = 0; i < count; i++)
+                    {
+                        Pr = new Modals.Persons.Person { FullName = RandomGen.GetFulNameDefault(), Password = RandomGen.GetPasswordDefault(8), AccessLevel = 1 };
+                        db.Persons.Add(Pr);
+                    }
+                    db.SaveChanges();
                 }
 
             }

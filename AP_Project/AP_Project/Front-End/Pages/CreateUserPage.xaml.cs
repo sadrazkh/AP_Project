@@ -27,7 +27,7 @@ namespace AP_Project.Front_End.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //Back_End.Func.Persons.AP_Project.Back_End.Func.Persons.Person.PersonGen(300,20);
+            Back_End.Func.Persons.AP_Project.Back_End.Func.Persons.Person.PersonGene(20);
         }
 
         private void backbtn_Click(object sender, RoutedEventArgs e)
