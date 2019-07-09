@@ -45,12 +45,27 @@ namespace AP_Project.Front_End.Pages
 
         private void editusersinformation(object sender, RoutedEventArgs e)
         {
-
+            UserManagement mg = new UserManagement();
+            MainWindow win = (MainWindow)Window.GetWindow(this);
+            win.body.Children.Remove(this);
+            win.body.Children.Add(mg);
         }
 
         private void createuserbtn(object sender, RoutedEventArgs e)
         {
+            CreateUserPage cr = new CreateUserPage();
+            MainWindow win = (MainWindow)Window.GetWindow(this);
+            win.body.Children.Remove(this);
+            win.body.Children.Add(cr);
+        }
 
+        private void signoutbtn_Click(object sender, RoutedEventArgs e)
+        {
+            Back_End.Func.Persons.AP_Project.Back_End.Func.Persons.Person.LogOut();
+            SignInAndSignUpPage sign2 = new SignInAndSignUpPage();
+            MainWindow win = (MainWindow)Window.GetWindow(this);
+            win.body.Children.Remove(this);
+            win.body.Children.Add(sign2);
         }
     }
 }

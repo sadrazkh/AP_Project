@@ -6,7 +6,8 @@
              xmlns:local="clr-namespace:AP_Project.Front_End.Pages"
              mc:Ignorable="d" 
              d:DesignHeight="605" d:DesignWidth="1120" Background="White">
-    <Grid>
-        <Button Content="Create 1000 Users" Width="150" Height="50" />
+    <Grid Background="#FF9C9C9C">
+        <Button Click="Button_Click" Content="Create 1000 Users" Height="50" Margin="429,267,428,287.8" RenderTransformOrigin="0.5,0.504" Background="#FF474747" BorderBrush="#FF474747" />
+        <Button Width=" 100" Height="50" Content="Back" x:Name="backbtn" Click="backbtn_Click"  Background="#FF474747" BorderBrush="#FF474747" Margin="512,380,508,174.8" RenderTransformOrigin="0.5,0.504"/>
     </Grid>
 </UserControl>

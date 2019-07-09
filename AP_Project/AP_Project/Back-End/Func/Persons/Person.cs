@@ -29,6 +29,8 @@ namespace AP_Project.Back_End.Func.Persons
                 using (var db = new Modals.Context())
                 {
                     var res = db.Persons.Where(i => i.UserName == Us && i.Email == _Email && i.FullName == _FullName && i.PhoneNumber == _PhoneNumber).FirstOrDefault();
+
+
                     if (res == null)
                     {
                         base.UserName = Us;
@@ -67,6 +69,7 @@ namespace AP_Project.Back_End.Func.Persons
                     {
                         using (var db = new Modals.Context())
                         {
+                            
                             db.Persons.Add(new Modals.Persons.Person { UserName = Us, Password = Security.Hash_SHA256.CreatHash256(Pas), FullName = _FullName, PhoneNumber = _PhoneNumber, Email = _Email, AccessLevel = 1, Cart = null });
                             db.SaveChanges();
                         }
@@ -121,22 +124,19 @@ namespace AP_Project.Back_End.Func.Persons
                     db.SaveChanges();
                 }
             }
-            public  void ChangePersonalInfo(string NewEmail, string NewFullName, string NewPhoneNumber)
+            public  static void ChangePersonalInfo(string user,string NewEmail, string NewFullName, string NewPhoneNumber)
             {
-                string Us = base.UserName;
                 using (var db = new Modals.Context())
                 {
-                    var res = db.Persons.Where(i => i.UserName == Us).FirstOrDefault();
+                    var res = db.Persons.Where(i => i.UserName == user).FirstOrDefault();
                     if (NewFullName != null)
                     {
-                        base.FullName = NewFullName;
                         res.FullName = NewFullName;
                     }
                     if (NewEmail != null)
                     {
                         if (System.Text.RegularExpressions.Regex.IsMatch(NewEmail, @"^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$"))
                         {
-                            base.Email = NewEmail;
                             res.Email = NewEmail;
                         }
                         else
@@ -148,7 +148,6 @@ namespace AP_Project.Back_End.Func.Persons
                     {
                         if (System.Text.RegularExpressions.Regex.IsMatch(NewPhoneNumber, @"(\+98|0)?9\d{9}"))
                         {
-                            base.PhoneNumber = NewPhoneNumber;
                             res.PhoneNumber = NewPhoneNumber;
                         }
                         else
@@ -162,6 +161,7 @@ namespace AP_Project.Back_End.Func.Persons
             }
             public static bool LogOut()
             {
+                MainRoot.SetRoot(null);
                 return true;
             }
             public static void PersonGen()
@@ -214,7 +214,7 @@ namespace AP_Project.Back_End.Func.Persons
                     }
                 }
             }
-            public static void PersonGenThread(int Len = 100,int ramControler = 20)
+            public static void PersonGenThread(int Len = 1000,int ramControler = 20)
             {
                 len = Len;
                 RamControler = ramControler;

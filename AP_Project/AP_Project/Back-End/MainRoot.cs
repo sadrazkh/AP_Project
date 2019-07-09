@@ -10,12 +10,24 @@ namespace AP_Project.Back_End
     {
         public static void SetRoot(Back_End.Modals.Persons.Person ob)
         {
-            UserName = ob.UserName;
-            FullName = ob.FullName;
-            AccesAccessLevel = ob.AccessLevel;
-            Email = ob.Email;
-            PhoneNumber = ob.PhoneNumber;
-            Cart = ob.Cart;
+            if(ob == null)
+            {
+                UserName = null;
+                FullName = null;
+                AccesAccessLevel = null;
+                Email = null;
+                PhoneNumber = null;
+                Cart = null;
+            }
+            else
+            {
+                UserName = ob.UserName;
+                FullName = ob.FullName;
+                AccesAccessLevel = ob.AccessLevel;
+                Email = ob.Email;
+                PhoneNumber = ob.PhoneNumber;
+                Cart = ob.Cart;
+            }
         }
         public static void SetRoot(string _UserName,string _FullName,short? _AccesAccessLevel,string _Email,string _PhoneNumber,List<Modals.Products.Product> _Cart)
         {
@@ -28,6 +40,7 @@ namespace AP_Project.Back_End
         }
 
         public static string UserName  { get; set; }
+        public static string Password { get; set; }
         public static string FullName { get; set; }
         public static short? AccesAccessLevel { get; set; }
         public static string Email { get; set; }

@@ -12,5 +12,6 @@
         <Button Click="editproductsbtn" Content="Enter to Edit Products Page"   Width="500" Height="60" Margin="310,374,310,171" Background="#FF474747" BorderBrush="#FF474747"/>
         <Button Click="editusersinformation" Content="Enter to Edit Users Information Page" Width="500" Height="60" Margin="310,198,310,347" Background="#FF474747" BorderBrush="#FF474747"/>
         <Button Click="addproduct" Content="Add product" Width="500" Height="60"  Background="#FF474747" BorderBrush="#FF474747" Margin="310,464,310,81"/>
+        <Button Width=" 100" Height="50" Content="Sign Out"  Background="#FF474747" BorderBrush="#FF474747" x:Name="signoutbtn" Click="signoutbtn_Click" Margin="506,537,514,17.8" />
     </Grid>
 </UserControl>

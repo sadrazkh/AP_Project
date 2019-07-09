@@ -29,8 +29,10 @@ namespace AP_Project.Front_End.Pages
         public management bossmanage = new management();
         private void SignIn_Click(object sender, RoutedEventArgs e)
         {
+            
             try
             {
+                Back_End.MainRoot.Password = Password.Password;
                 if (Back_End.Func.Persons.AP_Project.Back_End.Func.Persons.Person.PersonLogin(UserName.Text, Password.Password))
                 {
                     if (Back_End.MainRoot.AccesAccessLevel==1)
@@ -61,7 +63,7 @@ namespace AP_Project.Front_End.Pages
 
             try
             {
-                
+                Back_End.MainRoot.Password = Password.Password;
                 Back_End.Func.Persons.AP_Project.Back_End.Func.Persons.Person ob = new Back_End.Func.Persons.AP_Project.Back_End.Func.Persons.Person(UserNameUp.Text, PasswordUp.Password,NameUp.Text, EmailUp.Text, PhoneUp.Text);
                 Back_End.MainRoot.SetRoot(ob); 
                 MainWindow win = (MainWindow)Window.GetWindow(this);

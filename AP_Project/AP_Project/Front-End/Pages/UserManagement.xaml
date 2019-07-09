@@ -16,14 +16,15 @@
             <Label Content="Full Name" Height="50" Margin="404,14,2,386" FontSize="18" Foreground="#DDFFFFFF" />
             <Label Content="Phone Number" Height="50"  Margin="366,90,2,310" FontSize="18" Foreground="#DDFFFFFF"/>
             <Label Content="Email" Height="50" Margin="436,170,2,230" FontSize="18" Foreground="#DDFFFFFF"/>
-            <Label Content="User Name" Height="50" Margin="396,250,0,150" FontSize="18" Foreground="#DDFFFFFF"/>
-            <Label Content="Password" Height="50" Margin="412,338,2,62" FontSize="18" Foreground="#DDFFFFFF"/>
-            <TextBox Width="250" Height="40" Margin="100,323,150,87" Foreground="White"/>
-            <TextBox Width="250" Height="40" Margin="100,236,150,174" Foreground="White"/>
-            <TextBox Width="250" Height="40" Margin="100,156,150,254" Foreground="White"/>
-            <TextBox Width="250" Height="40" Margin="100,74,150,336" Foreground="White"/>
-            <TextBox Width="250" Height="40" Margin="100,-2,150,412" Foreground="White"/>
-            <Button Content="Save Changes And Return To Menu" Height="40" Margin="31,394,202,16" Background="#FF474747" BorderBrush="#FF474747"/>
+            <Label Content="User Name"  Height="50" Margin="396,250,0,150" FontSize="18" Foreground="#DDFFFFFF"/>
+            <!--<Label Content="Password" Height="50" Margin="412,338,2,62" FontSize="18" Foreground="#DDFFFFFF"/>-->
+            <!--<TextBox  Width="250" Height="40" Margin="100,323,150,87" Foreground="White"/>-->
+            <TextBox x:Name="newusernametxtbx" Width="250" Height="40" Margin="100,236,150,174" Foreground="White"/>
+            <TextBox x:Name="newEmailtxtbx" Width="250" Height="40" Margin="100,156,150,254" Foreground="White"/>
+            <TextBox x:Name="newphonenumber" Width="250" Height="40" Margin="100,74,150,336" Foreground="White"/>
+            <TextBox x:Name="newfullNameTxt"  Width="250" Height="40" Margin="100,-2,150,412" Foreground="White"/>
+            <Button Content="Save Changes And Return To Menu" Height="40" Margin="31,394,202,16" Background="#FF474747" BorderBrush="#FF474747" Click="Button_Click_1"/>
+            <Button x:Name="showinfobtn" Click="showinfobtn_Click" Content="View Information" Height="40" Background="#FF474747" BorderBrush="#FF474747" Margin="321,389,34,21"/>
         </Grid>
     </Grid>
 </UserControl>

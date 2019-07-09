@@ -38,5 +38,13 @@ namespace AP_Project.Back_End.Func
                 db.SaveChanges();
             }
         }
+
+        public static void  dbreload()
+        {
+            using (var db = new Modals.Context())
+            {
+                db.Persons.Update(new Modals.Persons.Person());
+            }
+        }
     }
 }

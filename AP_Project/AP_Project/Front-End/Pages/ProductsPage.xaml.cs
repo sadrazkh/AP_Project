@@ -34,7 +34,12 @@ namespace AP_Project.Front_End.Pages
 
         private void SignOutbtn_click(object sender, RoutedEventArgs e)
         {
-
+            Back_End.Func.Persons.AP_Project.Back_End.Func.Persons.Person.LogOut();
+            SignInAndSignUpPage sign2 = new SignInAndSignUpPage();
+            MainWindow win = (MainWindow)Window.GetWindow(this);
+            win.body.Children.Remove(this);
+            win.body.Children.Add(sign2);
+           
         }
     }
 }

@@ -25,12 +25,43 @@ namespace AP_Project.Front_End.Pages
         public UserManagement()
         {
             InitializeComponent();
+            
         }
         //public ProductsPage pr1 = new ProductsPage();
-        private void Button_Click(object sender, RoutedEventArgs e)
+
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            MainWindow win = (MainWindow)Window.GetWindow(this);
+            if(MainRoot.AccesAccessLevel==2)
+            {
+                MainWindow win = (MainWindow)Window.GetWindow(this);
+                win.body.Children.Remove(this);
+                management mg3 = new management();
+                win.body.Children.Add(mg3);
+                Back_End.Func.Persons.AP_Project.Back_End.Func.Persons.Person.ChangePersonalInfo(MainRoot.UserName, newEmailtxtbx.Text, newfullNameTxt.Text, newphonenumber.Text);
+            }
+            else
+            {
+                MainWindow win = (MainWindow)Window.GetWindow(this);
+                win.body.Children.Remove(this);
+                ProductsPage pr1 = new ProductsPage();
+                win.body.Children.Add(pr1);
+                Back_End.Func.Persons.AP_Project.Back_End.Func.Persons.Person.ChangePersonalInfo(MainRoot.UserName, newEmailtxtbx.Text, newfullNameTxt.Text, newphonenumber.Text);
+            }
+           
             
+        }
+
+        private void showinfobtn_Click(object sender, RoutedEventArgs e)
+        {
+            Back_End.Func.Persons.AP_Project.Back_End.Func.Persons.Person.PersonLogin(MainRoot.UserName, MainRoot.Password);
+            Back_End.Func.ConectionToDb.dbreload();
+            newfullNameTxt.Text = MainRoot.FullName;
+            newusernametxtbx.Text = MainRoot.UserName;
+            newEmailtxtbx.Text = MainRoot.Email;
+            newphonenumber.Text = MainRoot.PhoneNumber;
+           
+
         }
     }
 }
